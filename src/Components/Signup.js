@@ -68,11 +68,11 @@ const SignUpForm = () => {
                         variant="outlined"
                         required
 
-
                         InputProps={{
                             style: {
                                 fontSize: "1.6rem",
-                                fontWeight: "600"
+                                fontWeight: "600",
+                                pading:"0px"
                             }
                         }}
 

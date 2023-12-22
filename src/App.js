@@ -17,6 +17,7 @@ import Table from './Components/Table';
 import About from './Components/About';
 import Signin from './Components/Signin';
 import Signup from "./Components/Signup"
+
 function App() {
   const cursor = useRef(null)
   const changePosition = (e) => {
@@ -37,16 +38,19 @@ function App() {
             <Navbar2 />
             <Home />
 
-            <Box sx={{ marginTop: "100vh" }}>
+            <Box sx={{ marginTop: "90vh" }}>
 
               <About></About>
               <Events />
               <Schedule></Schedule>
               <Table></Table>
               <Member></Member>
+      
+<Sponser></Sponser>
               <Footer />
             </Box>
             <div className="cursor-style" ref={cursor} ></div>
+            
             </div>
           </>
         } />
@@ -60,7 +64,7 @@ function App() {
 
 
 
-      {/* <Sponser/> */}
+      
 
       {/* <div className="cursor-style" ref={cursor} ></div> */}
 

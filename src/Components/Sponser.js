@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import AnimatedTitle from './AnimTitle';
-import Events from './Events';
-import Card_comp from './Card_comp';
+import { Box } from '@mui/material';
 import styled, { keyframes, css } from "styled-components";
 
 const Sponser = () => {
@@ -24,29 +23,13 @@ const row1 = [
     "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png",
   ];
     return (
-        <>
-            {/* <div className='heading' id='events'><AnimatedTitle name="sponsers."/></div>
-            <div className='container'>
-                <div class="horizontal-scrolling-items" >
-                    <Card_comp></Card_comp>
-                    <Card_comp></Card_comp>
-                    <Card_comp></Card_comp>
-                    <Card_comp></Card_comp>
-                    <Card_comp></Card_comp>
-                    <Card_comp></Card_comp>
-                    <Card_comp></Card_comp>
-                    <Card_comp></Card_comp>
-                    <Card_comp></Card_comp>
-                    <Card_comp></Card_comp>
-
-                    </div>
-
-               
-
-            </div> */}
+      <>
+      <div className='heading' id='sponsers'><AnimatedTitle name="sponsers."/></div>
+        <Box sx={{display:"flex",justifyContent:"center",overflow:"hidden"}}>
+            
 <AppContainer>
 <Wrapper>
-<div className='heading' id='sponsers'><AnimatedTitle name="sponsers."/></div>
+
         <Marquee>
           <MarqueeGroup>
             {row1.map((el) => (
@@ -67,6 +50,7 @@ const row1 = [
       </Wrapper>
 </AppContainer>
 
+        </Box>
         </>
     );
 };
@@ -92,15 +76,15 @@ const Text = styled.div`
 `;
 
 const Note = styled.div`
-  font-size: 18px;
+  font-size: 1.6rem;
   font-weight: 200;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
   color: #7c8e9a;
 `;
 
 const Marquee = styled.div`
   display: flex;
-  width: 1200px;
+  width: 150rem;
   overflow: hidden;
   user-select: none;
 
@@ -155,6 +139,6 @@ const Image = styled.img`
   /* border: 1px solid black; */
   border-radius: 0.5rem;
   aspect-ratio: 16/9;
-  padding: 5px 20px;
+  padding: 0.5rem 4rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `;

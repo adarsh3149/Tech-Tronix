@@ -2,7 +2,6 @@ import React from 'react'
 import { Box } from '@mui/material';
 import Card_comp from './Card_comp';
 import Card_main from './Card_main';
-import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import AnimatedTitle from './AnimTitle';
 
 function Events() {

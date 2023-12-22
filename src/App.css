@@ -22,7 +22,7 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 
-  color: var(--color);
+  clor: var(--color);
 }
 
 html{
@@ -55,12 +55,7 @@ body{
   text-transform: uppercase;
 font-weight: 200;
 }
-.hero-svg{
-   position: absolute;
-   opacity: 10%;
-   width: 50rem;
-   z-index: -99;
-}
+
 .nav{
  
   display: flex;
@@ -72,14 +67,10 @@ font-weight: 200;
 padding: 0 2rem;
   letter-spacing: 0.2rem;
   font-weight: 400;
-  color: #f1f1f1;
+  coor: #f1f1f1;
 
 }
-.nav-items:hover ~ .cursor-style{
-transform: scale(3);
-transition: transform 0.1s ease-in;
-background-color: red;
-}
+
 .svg{
   width: 4rem;
 
@@ -513,7 +504,7 @@ background-color: red;
    color:  #f1f1f1;
    font-size: 4.5rem;
    font-weight: 700;
-   letter-spacing: 0.4rem;
+   letter-spcing: 0.4rem;
    margin: 0;
  }
  
@@ -527,7 +518,7 @@ background-color: red;
  .footer-distributed .footer-center i{
    background-color:  #0f1922;
    color: #f1f1f1;
-   font-size: 25px;
+   font-size: 2.5rem;
    width: 38px;
    height: 38px;
    border-radius: 50%;
@@ -553,7 +544,7 @@ background-color: red;
  .footer-distributed .footer-center p span{
    display:block;
    font-weight: normal;
-   font-size:14px;
+   font-size:1.4rem;
    line-height:2;
  }
  
@@ -565,7 +556,7 @@ background-color: red;
  .footer-distributed .footer-links a:before {
    content: "|";
    font-weight:300;
-   font-size: 20px;
+   font-size: 2rem;
    left: 0;
    color: #f1f1f1;
    display: inline-block;
@@ -588,14 +579,16 @@ background-color: red;
    font-size: 13px;
    font-weight: normal;
    margin: 0;
+   text-transform: none;
  }
  
  .footer-distributed .footer-company-about span{
    display: block;
    color:  #f1f1f1;
-   font-size: 14px;
+   font-size: 1.4rem;
    font-weight: bold;
    margin-bottom: 20px;
+   text-transform: uppercase;
  }
  
  .footer-distributed .footer-icons{
@@ -615,7 +608,7 @@ background-color: red;
 	background-color:  #f1f1f1;
 	border-radius: 2px;
 
-	font-size: 20px;
+	font-size: 2rem;
 	color: #0f1922;
 	text-align: center;
 	line-height: 35px;
@@ -648,12 +641,13 @@ th{
 .bg{
   background-size: "cover"; background-repeat : "no-repeat"; background-position: "center",
 }
-.bg::before {
+.video-container::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.45);
+  backdrop-fiter: blur(5px);
 }
 
 @keyframes anim{
@@ -677,10 +671,99 @@ th{
     background:url("./Components/Untitled-1.png") ;
   }
 }
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Place the video behind other content */
+}
+
+.logos{
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+@keyframes slide{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+.footer{
+  background:#0F1922;
+  padding:30px 0px;
+font-size: 1.2rem;
+font-weight: 400;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  fot-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  cursor: none;
+  }
+  
+  .footer .row a:hover{
+  color:#fff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  
+  }
+.logos_slide{
+  display: inline-block;
+  animation: slide 15s infinite linear;
+}
+.logos_slide img{
+  width: 15rem;
+  margin: 0 2rem;
+  pading: 1rem;
+  border-radius: 1rem;
+}
+.logos:hover .logos_slide{
+  animation-play-state: paused;
+}
+
  @media (max-width: 880px) {
  
    .footer-distributed{
-     font: bold 14px sans-serif;
+     ont: bold 14px sans-serif;
    }
  
    .footer-distributed .footer-left,
@@ -700,27 +783,31 @@ th{
  
 @media only screen and (max-width: 600px) {
   html{
-    font-size: 0.4rem;
-  }
+    font-size: 0.3rem;
 
+  }
+.cursor-style{
+  display: none;
+}
 .button{
   flex-direction: column;
 }
-.hero-svg{
-  width: 40rem;}
-  .cursor-style{
-    display: none;
-  }
-  .glitch{
-    font-size: 10rem;
-  }
+
   table,th,td{
     padding: 1.5rem 3rem;
   }
-}
-@media only screen and (min-width: 600px) and (max-width:800px){
- 
-  .glitch{
-    font-size: 12rem;
-  }
+  .footer{
+    text-align:left;
+    padding:5%;
+    font-size: 1.3rem;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin-right:3%;
+    }
+    
 }

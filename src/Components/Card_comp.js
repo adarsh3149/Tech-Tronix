@@ -7,34 +7,11 @@ import { CardActionArea } from '@mui/material';
 import { useContext } from 'react';
 import { Cart } from "../Context";
 import { motion, useAnimation } from "framer-motion";
+import { Event_data } from './Event_data';
 function Card_comp() {
-  const { setIsOpen } = useContext(Cart);
-
-const events=[
-  {
-    name:"a",
-    desc:"abc"
-  },
-  {
-    name:"b",
-    desc:"bsajx"
-  },
-  {
-    name:"b",
-    desc:"bsajx"
-  },
-  {
-    name:"b",
-    desc:"bsajx"
-  },
-  {
-    name:"b",
-    desc:"bsajx"
-  },
-]
-    
-
-const list=events.map((e,index)=>{
+  const { setIsOpen,setclick,click } = useContext(Cart);
+  console.log(click)
+const list=Event_data.map((e,index)=>{
   return(
 <motion.div
         initial={{ opacity: 0,y:50 }}
@@ -49,23 +26,22 @@ const list=events.map((e,index)=>{
           sx={{
             borderRadius: '0.5rem',
             border: '0.1rem solid #0f1922',
-          }}
+          }} onClick={()=>setclick(e)}
         >
           <CardActionArea onClick={() => setIsOpen(true)} sx={{cursor: "none" }}
           >     
               <Box className='image' sx={{width: { xs: "20rem", md: "26rem" },
-            height: { xs: "28rem", md: "36rem" },background:"url('https://sm.ign.com/t/ign_in/screenshot/default/feugmgtwqael2md_y1va.1280.jpg')",backgroundSize:"cover",backgrondRepeat:"no-repeat",backgroundPosition:"center"}}>               
+            height: { xs: "28rem", md: "36rem" },background:e.img,backgroundSize:"cover",backgrondRepeat:"no-repeat",backgroundPosition:"center"}}>               
               </Box>
-              <Typography variant="h4" component="div" sx={{padding:" 1rem"}}>
+              <Box component="div" sx={{padding:" 1rem",textTransform:"uppercase",fontSize:"1.6rem"}}>
                 {e.name}
-              </Typography>      
+              </Box>      
           </CardActionArea>
         </Box>
       </motion.div>
   )
 })
 
-console.log(list)
     return (
 
 <>

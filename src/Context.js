@@ -3,8 +3,9 @@ export const Cart=createContext();
 
 function Context({children}) {
 const [isOpen,setIsOpen]=useState(false);
+const [click,setclick]=useState({});
   return (
-    <Cart.Provider value={{isOpen,setIsOpen}}>{children}</Cart.Provider>
+    <Cart.Provider value={{isOpen,setIsOpen,click,setclick}}>{children}</Cart.Provider>
   )
 }
 
