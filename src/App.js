@@ -17,6 +17,7 @@ import Table from './Components/Table';
 import About from './Components/About';
 import Signin from './Components/Signin';
 import Signup from "./Components/Signup"
+import EventsPage from './Components/EventsPage';
 
 function App() {
   const cursor = useRef(null)
@@ -32,31 +33,32 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={
+        <Route exact path="/" element={
           <>
-          <div className="App" style={{ minHeight: "100vh", minWidth: "100vw" }} onMouseMove={changePosition}>
-            <Navbar2 />
-            <Home />
+            <div className="App" style={{ minHeight: "100vh", minWidth: "100vw" }}   onMouseMove={changePosition}>
+              <Navbar2 />
+              <Home />
 
-            <Box sx={{ marginTop: "90vh" }}>
+              <Box sx={{ marginTop: "100vh" }}>
 
-              <About></About>
-              <Events />
-              <Schedule></Schedule>
-              <Table></Table>
-              <Member></Member>
-      
-<Sponser></Sponser>
-              <Footer />
-            </Box>
-            <div className="cursor-style" ref={cursor} ></div>
-            
+                <About></About>
+                <Events />
+                <Schedule></Schedule>
+                <Table></Table>
+                <Member></Member>
+
+                <Sponser></Sponser>
+                <Footer />
+                {/* <EventsPage></EventsPage> */}
+              </Box>
+              <div className="cursor-style" ref={cursor} ></div>
+
             </div>
           </>
         } />
         <Route path="/signup" element={<Signup></Signup>} />
         <Route path="/signin" element={<Signin></Signin>} />
-
+        <Route path="/events" element={<EventsPage></EventsPage>} />
       </Routes>
 
 
@@ -64,7 +66,7 @@ function App() {
 
 
 
-      
+
 
       {/* <div className="cursor-style" ref={cursor} ></div> */}
 

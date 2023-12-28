@@ -1,65 +1,142 @@
-export  const Event_data=[
+export const Event_data = [
     {
-        id:1,
-        name:"POSTERAMA",
-        fullname:"POSTER PRESENTATION - POSTERAMA",
-        img:"",
-        theme:"electronics sustainability",
-        description:`In a world flooded with information, capturing attention is an art.
-        Lets explore the significance of poster representation and the unique power it holds in conveying ideas. The Poster presentation competition 'Posterama' is an innovative and an impactful opportunity to showcase graphic skills and potential in the field of graphic design and art. Posters should present a complex idea or message in a simple and distilled form that would strike the minds of the viewer at once. Your participation would be highly solicited in this event through your versatile perspective to the minds of observers. The EL & TC SOCIETY invites you to a rousing technical fest, TECHTRONIX. Vibe with us during this learning adventure where you can learn and enjoy at the same time`,
-        rules:["Size of the poster should be 3x2 ft."," Participation for the event will be only accepted for groups,each group must contain 2 members.","Name of student and guide should be present.","An  abstract within 200 should be submitted before the event to the senior in charge."
-        ]
-    },
-    {
-        id:2,
-        name:"Code Compendium",
-        fullname:"Code-fest - Code Compendium",
-        img:"",
-        theme:"",
-        description:"'The only way to do great work is to love what you do.' Display your problem-solving prowess. Tread through the branches of algorithms into the world of loops and queues and partake in the exhilarating coding competition, CODE COMPENDIUM . This event offers a remarkable opportunity for you to showcase your coding prowess and bask in the limelight of your brilliance. As we open the gates, the virtual realm awaits your keystrokes, challenging your coding expertise like never before. The EL & TC Society invites you to be part of our technical fest TECHTRONIX. Mark your calendar for this exciting and rousing event, Code Compendium. Let your fingers tap to victory.",
-        rules:["Participation for the event will be only accepted for groups. each group must contain 2 members.","Round 1 will have 6 questions.","Out of 6 questions, 3 questions will be using matlab and 3 questions using vivado.","Round 2 details will be disclosed at the event","No use of phone Or internet","Bring your own laptops"
-        ]
-    },
-    {
-        id:3,
-        name:"LOGIC LABYRINTH",
-        fullname:"Circuit Modelling/Designing - LOGIC LABYRINTH",
-        theme:"To find the solution to the technical problems in our society by using basic circuital elements such as resistor, capacitor,transistors.",
-        img:"",
-        description:"'Circuit by Circuit, We Illuminate the Path to Innovation'. Once you know how to solve problems through a few components and circuits, you can start the journey of future innovations.This can help a student to come up with new technologies and innovations. Yet again here is a challenge for young tinkering minds whose hearts beat for a better tomorrow, “Logic Labyrinth” the circuit-making competition. Wherein you are required to assemble your team to find the solution to the technical problems by using the basic circuital elements.\n The EL & TC Society invites you to be a part of our technical fest TECHTRONIX. Join us in the Logic Labyrinth where your circuits being efficient and economic will be beneficial for society.",
-        rules:["It should be eco friendly.","It should be economical.","The circuit should be made by the materials which are readily available.","It should be made from elements such as resistors, capacitors.","No microprocessors or other fancy circuits should be used.","It should be easy to use.","It should be beneficial to the society."
+        id: 1,
+        name: "POSTERAMA",
+        fullname: "POSTER PRESENTATION - POSTERAMA",
+        img: "/images/img-3.png",
+        istheme: true,
+        isurl2: false,
+        theme: "Electronics Sustainability",
+        description: `“In a world flooded with information, capturing attention is an art.” 
+        Let’s explore the significance of poster representation and the unique power it holds in conveying ideas. The Poster presentation competition “Posterama” is an innovative and an impactful opportunity to showcase graphic skills and potential in the field of graphic design and art.
+        Posters should present a complex idea or message in a simple and distilled form that would strike the minds of the viewer at once. Your participation would be highly solicited in this event through your versatile perspective to the minds of observers.
+        The EL & TC SOCIETY invites you to a rousing technical fest, TECHTRONIX. Vibe with us during this learning adventure where you can learn and enjoy at the same time.
+        Winners will be rewarded with exciting prizes!!
+        "`,
+        rules: ["Size of the poster should be 3x2 ft.", " Participation for the event will be only accepted for groups,each group must contain 2 members.",
+
+            "Name of student and guide should be present.", "An  abstract within 200 should be submitted before the event to the senior in charge."
         ],
-        problem:[
-            "Emergency alert on mobile phones. Suppose you are in a situationwhere the vehicle you are traveling in breaks down with no help in sight or you anticipate dangerto your life or you have a medical emergency. There should be one button on your phone, whichupon being pressed sends out an alert message to the police station, hospital or fire station. Noneed to search and click a number, just press the button and it goes to savednumbers.Likewise, you can send a message to a group of selected friends at the click of abutton. It can bring help immediately.","Develop a security system using PIR sensors and analog circuits to detect motion and trigger alarms without the need for a microcontroller.","Design a parking sensor system using ultrasonic sensors and analog circuits to detect obstacles and provide audio or visual feedback to drivers.","Temperature controlled fan","Colpitts oscillator","MOSFET h bridge motor driver","Transistor radio receiver","Photovoltaic solar tracker","Voltage control oscillator","Fm radio jammer","Transistor based water level indicator","Transistor based fire alarm","Household Gas leakage detection from LPG cylinders","Microplastic detection in water . We can do that by using some kind of light sensor whichwould check intensity of light. We can run water through a transparent pipe and use light sourcefrom one side of pipe and a light sensor to the another side. If the intensity of light at sensor is less, then we can conclude that there is some impurities present.",
-            "Non lethal portable weapon (by using high voltage). Here we can use transformer to step upbattery voltage. This high voltage will act for few seconds. Since it is portable one can carry easily.",")Prevention of mosquitoes and insects using ultrasonic frequencies.","Address the problem of slow decomposition of organic waste in landfills by promoting biodegradation.Create a system that accelerates organic waste decomposition.","Address concerns related to noise pollution in urban settings and promote awareness.Createa noise level monitoring system using sound sensors and analog circuits to trigger visual or audible alerts when predefined noise thresholds are exceeded.","Design a system to efficiently integrate renewable energy sources into existing power grids, addressing challenges related to intermittency and grid stability.","Develop a low-cost hearing aid using analog circuitry to amplify and filter sound based on theuser's hearing needs."
-        ]
+        time: `19.01.2024-10.45am
+        20.01.2024-12.00pm`,
+        venue: "E.Learning VSSUT",
+        url: 'https://docs.google.com/forms/u/0/d/1WgckB5c2VZ9g9HyYWQ0tBHa0MkNk8txE1ufpOVowDdY/viewform?edit_requested=true'
     },
     {
-        id:4,
-        name:"HACKSPHERE",
-        fullname:"Internal Hackathon - HACKSPHERE",
-        img:"",
-        description:"'Innovation is taking two things that already exist and putting them together in a new way' In this competitive world, success is accompanied by the uniqueness of individuals. Catalyse is a profound paradigm shift in our world through the revolutionary power of innovation and technology. The HACKSPHERE is an innovative, impact-driven idea-thinking competition that challenges teams of 4 students to collaboratively solve multifaceted problem statements ranging from varied domains.While working on these innovative and creative projects your Intellectual stimulation, Personal Growth, Professional development, and Competitive advantage opportunities are enhanced. The EL & TC Society invites you to be a part of our technical fest, TECHTRONIX. Join us in the HACKSPHERE where your ingenuity can tackle real-world challenges and build solutions that truly make a difference.",
-        rules:["Participation for the event will be only accepted for groups. each group must contain 2 members.","Round 1 will have 6 questions.","Out of 6 questions, 3 questions will be using matlab and 3 questions using vivado.","Round 2 details will be disclosed at the event","No use of phone Or internet","Bring your own laptops"
-        ]
+        id: 2,
+        name: "Code Compendium",
+        fullname: "Code-fest - Code Compendium",
+        img: "/images/img-2.png",
+        isurl2: false,
+        istheme: false,
+        description: `“The only way to do great work is to love what you do.”
+        Display your problem-solving prowess. Tread through the branches of algorithms into the world of loops and queues and partake in the exhilarating coding competition, CODE COMPENDIUM . This event offers a remarkable opportunity for you to showcase your coding prowess and bask in the limelight of your brilliance. 
+        As we open the gates, the virtual realm awaits your keystrokes, challenging your coding expertise like never before.
+        The EL & TC Society invites you to be part of our technical fest TECHTRONIX. Mark your calendar for this exciting and rousing event, Code Compendium. Let your fingers tap to victory.
+        Winners will be rewarded with exciting prizes!!`
+        ,
+        rules: ["Participation for the event will be only accepted for groups. each group must contain 2 members.", "Round 1 will have 6 questions.", "Out of 6 questions, 3 questions will be using matlab and 3 questions using vivado.", "Round 2 details will be disclosed at the event", "No use of phone Or internet", "Bring your own laptops"
+        ],
+        time: `19.01.2024- 5pm`,
+        venue: "E.Learning VSSUT",
+        url: 'https://docs.google.com/forms/d/1oRY0ykzPp3UDB_sBq8kjRF9BNWsQEzdtVcW66jFBib4/viewform?edit_requested=true'
+    },
+    {
+        id: 3,
+        name: "LOGIC LABYRINTH",
+        istheme: true,
+        isurl2: false,
+        fullname: "Circuit Modelling/Designing - LOGIC LABYRINTH",
+        theme: "To find the solution to the technical problems in our society by using basic circuital elements such as resistor, capacitor,transistors.",
+        img: "/images/img-4.jpg",
+        description: `“Circuit by Circuit, We Illuminate the Path to Innovation.”
+        Once you know how to solve problems through a few components and circuits, you can start the journey of future innovations.This can help a student to come up with new technologies and innovations.
+        Yet again here is a challenge for young tinkering minds whose hearts beat for a better tomorrow, “Logic Labyrinth” the circuit-making competition. Wherein you are required to assemble your team to find the solution to the technical problems by using the basic circuital elements.
+        The EL & TC Society invites you to be a part of our technical fest TECHTRONIX. Join us in the Logic Labyrinth where your circuits being efficient and economic will be beneficial for society.
+        Winners will be rewarded with exciting prizes!!`
+        ,
+        rules: ["It should be eco friendly.", "It should be economical.", "The circuit should be made by the materials which are readily available.", "It should be made from elements such as resistors, capacitors.", "No microprocessors or other fancy circuits should be used.", "It should be easy to use.", "It should be beneficial to the society."
+        ],
+
+        time: `19.01.2024-11.45am 20.01.2024-12.00pm
+        `,
+        venue: "E.Learning VSSUT",
+        url: 'https://docs.google.com/forms/d/16M53lPEQ2mlugxb4vjHC1l7GizWJvovAlbfITrCQUis/viewform?edit_requested=true'
+    },
+    {
+        id: 4,
+        name: "HACKSPHERE",
+        fullname: "Internal Hackathon - HACKSPHERE",
+        img: "/images/img-1.png",
+        istheme: false,
+        isurl2: false,
+        description: `"Innovation is taking two things that already exist and putting them together in a new way"
+        In this competitive world, success is accompanied by the uniqueness of individuals. Catalyse is a profound paradigm shift in our world through the revolutionary power of innovation and technology. The HACKSPHERE is an innovative, impact-driven idea-thinking competition that challenges teams of 4 students to collaboratively solve multifaceted problem statements ranging from varied domains.
+        While working on these innovative and creative projects your Intellectual stimulation, Personal Growth, Professional development, and Competitive advantage opportunities are enhanced.
+        The EL & TC Society invites you to be a part of our technical fest, TECHTRONIX. Join us in the HACKSPHERE where your ingenuity can tackle real-world challenges and build solutions that truly make a difference.
+        Winners will be rewarded with exciting prizes!!`
+        ,
+        rules: ["Participation for the event will be only accepted for groups", "Each group must contain 2 members.", "The participants should be of School of electrical sciences (ETC,EEE,EE)", "In first round Each team will have to submit an abstact within 200 word.", " In the second round the selected teams will have to prepare PPT (PPT format will be provided)", "Each team will get 3 to 4 minutes to present their PPT.", "Each participant can take part in not more than 2 teams", "The teams select their topic form the topics mentioned below :-",
+            "Underwater Communication",
+            "Smart Automation",
+            "Robotics and Drones",
+            "Agriculture/Rural development",
+            "Waste Management",
+            "Renewable Resources",
+            "Smart Education",
+            "Space technology",
+            "5G TechnoloGY",
+            "Mining",
+            "Disaster Management",
+            "Cyber Security",
+            "VLSI",
+            "IOT",
+            "AI/ML"
+                
+        ],
+        time: `19.01.2024 - 2.15pm`,
+        venue: "E.Learning VSSUT",
+        url : 'https://docs.google.com/forms/d/1vAAp9cNJzNG5288mYejYCSZ9v0tZ7hH_NloVI1N6cjw/viewform?edit_requested=true'
     },
     {
         id:5,
         name:"Byte Bounty",
         fullname:"Treasure Hunt - Byte Bounty",
-        img:"",
-        description:"'Innovation is taking two things that already exist and putting them together in a new way' In this competitive world, success is accompanied by the uniqueness of individuals. Catalyse is a profound paradigm shift in our world through the revolutionary power of innovation and technology. The HACKSPHERE is an innovative, impact-driven idea-thinking competition that challenges teams of 4 students to collaboratively solve multifaceted problem statements ranging from varied domains.While working on these innovative and creative projects your Intellectual stimulation, Personal Growth, Professional development, and Competitive advantage opportunities are enhanced. The EL & TC Society invites you to be a part of our technical fest, TECHTRONIX. Join us in the HACKSPHERE where your ingenuity can tackle real-world challenges and build solutions that truly make a difference.",
-        rules:["This fun event will be played within the college campus.","This competition is based on time.The one who finishes it with less time wins it."
-        ]
+        img:"/images/img-6.jpg",
+        istheme: false,
+        isurl2: false,
+        description:`“Seek and Uncover!”
+            Treasure hunts are information - based scavenger hunts, or puzzle hunts, in which teams use their collective brainpower to solve clues.Each team is presented with a group of puzzles, or clues, which teams must solve to find a piece of information.
+        This event improves our critical thinking ability, enhances our power to comprehend statements, and promotes teamwork and problem- solving skills to boost our imagination.
+        The EL & TC Society invites you to an intriguing technical fest, TECHTRONIX.Join us in the Byte Bounty, where you will follow the clues to uncover the treasure and be a Treasure Hunter!
+        Winners will be rewarded with exciting prizes!!`
+        ,
+        rules:["This fun event will be played within the college campus.","This competition is based on time.The one who finishes it with less time wins it.","Team Composition: Students from different batches can form a team.","Team Size: 4 participants in each team"
+        ],
+        time: `20.01.2024 - 2.00pm`,
+        venue: "E.Learning VSSUT",
+        url : 'https://docs.google.com/forms/d/1VHHLpRo-t0sFd6OZBYFTeoIuoqM2yd05JNbPHNjmbz4/viewform?edit_requested=true'
     },
     {
         id:6,
         name:"Mindscape Rumble",
         fullname:"Quiz Competition - Mindscape Rumble",
-        img:"",
+        img:"/images/img-5.png",
+        istheme: true,
+        isurl2: true,
         theme:"Space Quiz",
-        description:"'In the arena of the mind, every participant is a champion.' Display your talent and intellect in the vast field of knowledge and discover new realms of wisdom. Let the Mindscape Rumble be your stage to shine and showcase the brilliance within. Unleash your intellect, embrace the challenge, and let your curiosity soar. The EL & TC Society invites you to our rollercoaster technical fest, TECHTRONIX. Mark your calendar, gather your team, and let the Mindscape Rumble begin. Challenge yourself and others to a battle of wits that transcends boundaries!",
+        description:`"In the arena of the mind, every participant is a champion."  
+
+        Display your talent and intellect in the vast field of knowledge and discover new realms of wisdom.Let the Mindscape Rumble be your stage to shine and showcase the brilliance within.Unleash your intellect, embrace the challenge, and let your curiosity soar.
+    The EL & TC Society invites you to our rollercoaster technical fest, TECHTRONIX.Mark your calendar, gather your team, and let the Mindscape Rumble begin.Challenge yourself and others to a battle of wits that transcends boundaries!
+        Winners will be rewarded with exciting prizes!!`
+        ,
         rules:["Theme of the quiz: Space Quiz.","The quiz will be conducted in two rounds.","The top performers in the first round shall move on to the second round.","Team size: 2 members in each team.","The decision made by QuizMaster is final in the event of a dispute."
-        ]
+        ],
+        time: `19.01.2024 - 4.00pm
+    `,
+        venue: "E.Learning VSSUT",
+        url : 'https://docs.google.com/forms/d/1JFt4siGQf-X6k167-4baQ1IzkWgQjoVTXTmsbn9ArFg/viewform?chromeless=1&edit_requested=true&fbzx=2440563557209694685',
+        url2 : 'https://docs.google.com/forms/u/0/d/1v-G7XPctYdcShfdHLoNvo2hhpX1JsKW_j9W0bRm5Dzw/viewform?edit_requested=true',
     },
 ]

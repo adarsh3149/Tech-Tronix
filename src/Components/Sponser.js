@@ -1,58 +1,87 @@
 import React, { useRef, useEffect, useState } from 'react';
 import AnimatedTitle from './AnimTitle';
-import { Box } from '@mui/material';
+import { Box,Paper } from '@mui/material';
 import styled, { keyframes, css } from "styled-components";
 
 const Sponser = () => {
-const [speed,setSpeed]=useState(2);
-const row1 = [
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/7ae42bac3b34999c0db3.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/b2bd91d7b87b2181ca45.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6591cdc0702b32310306.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/3b7d9f4b073deb6a9b74.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/3cd767dea94a85078ca4.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/a2b3c3709ffedce2a22a.png",
+  const [speed, setSpeed] = useState(2);
+  const row1 = [
+    "/images/MCL_prev_ui.png",
   ];
 
   const row2 = [
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/9dd55e54b5a28658bf4e.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/0384060dcbf73b6a707c.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/35e044b3354aaa0caed5.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/f50ae7cbf6cc805bdadc.png",
-    "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png",
+    "IEEE ITR CHANDIPUR CHAPTER",
+    "/images/IEEE BBSR section_prev_ui.png",
+    "/images/IEEE power electronics_prev_ui.png",
+    "IEEE ITR CHANDIPUR CHAPTER",
+    "/images/IEEE BBSR section_prev_ui.png",
+    "/images/IEEE power electronics_prev_ui.png",
   ];
-    return (
-      <>
-      <div className='heading' id='sponsers'><AnimatedTitle name="sponsers."/></div>
-        <Box sx={{display:"flex",justifyContent:"center",overflow:"hidden"}}>
-            
-<AppContainer>
-<Wrapper>
+  return (
+    <>
+      <div className='heading' id='sponsers'><AnimatedTitle name="sponsers." /></div>
 
-        <Marquee>
-          <MarqueeGroup>
-            {row1.map((el) => (
-              <ImageGroup>
-                <Image src={el} />
-              </ImageGroup>
-            ))}
-          </MarqueeGroup>
-          <MarqueeGroup>
-            {row1.map((el) => (
-              <ImageGroup>
-                <Image src={el} />
-              </ImageGroup>
-            ))}
-          </MarqueeGroup>
-        </Marquee>
-       
-      </Wrapper>
-</AppContainer>
+      <Box
+        sx={{
+          fontSize: "2rem",
+          margin: "0 4rem",
+          fontWeight: "400",
+          letterSpacing: "0.5rem",
+        }}
+      >
+        PROUD SPONSER .
+      </Box>
 
+      <Paper elevation={0} sx={{ backgroundColor: "transparent", width: { xs: "24rem", md: "25rem" }, padding: "2rem",marginLeft:"2rem", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+        <Box sx={{ fontWeight: "600", fontSize: "1.6rem" }}> {row1.map((el) => (
+                <ImageGroup>
+                  <Image src={el} />
+                </ImageGroup>
+              ))}
         </Box>
-        </>
-    );
+
+      </Paper>
+
+      <Box
+        sx={{
+          fontSize: "2rem",
+          margin: "0 4rem",
+          fontWeight: "400",
+          letterSpacing: "0.5rem",
+        }}
+      >
+        Technical SPONSER .
+      </Box>
+
+      <Box sx={{ display: "flex", justifyContent: "center", overflow: "hidden" }}>
+
+
+
+        <Wrapper>
+
+          <Marquee>
+            <MarqueeGroup>
+              {row2.map((el) => (
+                <ImageGroup>
+                  <Image src={el} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup>
+            <MarqueeGroup>
+              {row2.map((el) => (
+                <ImageGroup>
+                  <Image src={el} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup>
+          </Marquee>
+
+        </Wrapper>
+
+
+      </Box>
+    </>
+  );
 };
 
 export default Sponser;
@@ -130,6 +159,7 @@ const ImageGroup = styled.div`
   place-items: center;
   width: clamp(10rem, 1rem + 40vmin, 30rem);
   padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
+  
 `;
 
 const Image = styled.img`
@@ -141,4 +171,5 @@ const Image = styled.img`
   aspect-ratio: 16/9;
   padding: 0.5rem 4rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: transparent;
 `;

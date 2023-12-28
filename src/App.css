@@ -21,7 +21,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-
+  
   clor: var(--color);
 }
 
@@ -29,7 +29,9 @@ html{
   font-size: 62.5%;
 }
 .App {
-  cursor: none;
+  /* cursor: none;
+   */
+ 
   display: flex;
   flex-direction: column;
 }
@@ -77,6 +79,7 @@ padding: 0 2rem;
 }
 ::-webkit-scrollbar {
   width: 10px;
+  display: none;
 }
 ::-webkit-scrollbar-thumb {
   background: #0F1922;
