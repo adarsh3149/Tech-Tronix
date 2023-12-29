@@ -67,20 +67,26 @@ const SignUpForm = () => {
         try {
             const db = database;
             const usersRef = ref(db, 'users');
-
+    
             // Check if the email is already registered
-            const emailQuery = await get(
-                usersRef,
-                orderByChild('email'),
-                equalTo(values.email)
-            );
-
-            if (emailQuery.exists()) {
+            const snapshot = await get(usersRef);
+            let isEmailRegistered = false;
+    
+            // Iterate through the snapshot to check for existing email
+            snapshot.forEach((childSnapshot) => {
+                const email = childSnapshot.val().email;
+    
+                if (email === values.email) {
+                    isEmailRegistered = true;
+                }
+            });
+    
+            if (isEmailRegistered) {
                 // Email is already registered, show alert
                 handleClickOpen();
                 return;
             }
-
+    
             // Push user data to the 'users' node
             await push(usersRef, {
                 Name: values.Name,
@@ -88,13 +94,14 @@ const SignUpForm = () => {
                 password: values.password,
                 registrationNumber: values.reg,
             });
-
+    
             console.log('User data submitted to Firebase:', values);
-            navigate('/login');
+            navigate('/signin');
         } catch (error) {
             console.error('Error submitting user data to Firebase:', error);
         }
     };
+    
     console.log(values)
     return (
         <>
