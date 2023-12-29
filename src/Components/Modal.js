@@ -27,61 +27,69 @@ const Modal = ({ data, close }) => {
       <li style={{ color: "#737373", fontSize: "1.25rem", fontWeight: "600", margin: "1rem 0", textTransform: 'none' }}>{e}</li>
     )
   })
-  const handleClick = (url) => {
-    const userToken = localStorage.getItem('userToken');
+  const handleClick = async (url) => {
+    try {
+        const userToken = localStorage.getItem('userToken');
 
-    if (userToken) {
-      // Check if the userToken matches an email in the database
-      const userRef = ref(getDatabase(), 'users');
-      get(userRef).then(snapshot => {
-        if (snapshot.exists()) {
-          const users = snapshot.val();
-          const userWithEmail = Object.values(users).find(user => user.email === userToken);
+        if (userToken) {
+            // Check if the userToken matches an email in the database
+            const userRef = ref(getDatabase(), 'users');
+            const snapshot = await get(userRef);
 
-          if (userWithEmail) {
-            // User is authenticated, proceed with the redirect
-            window.open(url, '_blank');
-          } else {
+            if (snapshot.exists()) {
+                const users = snapshot.val();
+                const userWithEmail = Object.values(users).find(user => user.email === userToken);
+
+                if (userWithEmail) {
+                    // User is authenticated, proceed with the redirect
+                    window.open(url, '_blank');
+                    return;
+                }
+            }
+
             // User not found in the database, show alert and redirect to signup
             handleClickOpen();
-          }
-        }
-      }).catch(error => {
-        console.error('Error checking userToken:', error.message);
-      });
-    } else {
-      // UserToken not found, show alert and redirect to signup
-      handleClickOpen();
-    }
-  };
-
-  const handleClick2 = (url2) => {
-    const userToken = localStorage.getItem('userToken');
-
-    if (userToken) {
-      // Check if the userToken matches an email in the database
-      const userRef = ref(getDatabase(), 'users');
-      get(userRef).then(snapshot => {
-        if (snapshot.exists()) {
-          const users = snapshot.val();
-          const userWithEmail = Object.values(users).find(user => user.email === userToken);
-
-          if (userWithEmail) {
-            // User is authenticated, proceed with the redirect
-            window.open(url2, '_blank');
-          } else {
-            // User not found in the database, show alert and redirect to signup
+        } else {
+            // UserToken not found, show alert and redirect to signup
             handleClickOpen();
-          }
         }
-      }).catch(error => {
+    } catch (error) {
         console.error('Error checking userToken:', error.message);
-      });
-    } else {
-      // UserToken not found, show alert and redirect to signup
-      handleClickOpen();
     }
-  };
+};
+
+
+const handleClick2 = async (url2) => {
+  try {
+      const userToken = localStorage.getItem('userToken');
+
+      if (userToken) {
+          // Check if the userToken matches an email in the database
+          const userRef = ref(getDatabase(), 'users');
+          const snapshot = await get(userRef);
+
+          if (snapshot.exists()) {
+              const users = snapshot.val();
+              const userWithEmail = Object.values(users).find(user => user.email === userToken);
+
+              if (userWithEmail) {
+                  // User is authenticated, proceed with the redirect
+                  window.open(url2, '_blank');
+                  return;
+              }
+          }
+
+          // User not found in the database, show alert and redirect to signup
+          handleClickOpen();
+      } else {
+          // UserToken not found, show alert and redirect to signup
+          handleClickOpen();
+      }
+  } catch (error) {
+      console.error('Error checking userToken:', error.message);
+  }
+};
+
   const modalVariants = {
     open: {
       opacity: 1,
