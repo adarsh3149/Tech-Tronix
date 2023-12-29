@@ -5,6 +5,14 @@ import { Link } from 'react-scroll';
 import { Link as MyLink } from 'react-router-dom';
 
 function Navbar2() {
+  const handleLogout = () => {
+    // Clear the userToken from local storage
+    localStorage.removeItem('userToken');
+    // Redirect to the login or signup page
+    // You can replace '/login' with the appropriate path
+    window.location.href = '/';
+  };
+  const userTokenExists = localStorage.getItem('userToken');
 
   const getOffset = () => {
     // Adjust offset based on screen size using media queries
@@ -63,7 +71,20 @@ function Navbar2() {
             <Link to="members" smooth={true} duration={1000} offset={getOffset()} style={{textDecoration:"none",cursor:"none"}}>
             <div className="nav-items" style={{color:scrolling?'#0f1922':"#f1f1f1"}}><a href='#members'/>members</div>
             </Link>
-     
+            {!userTokenExists && (
+              <MyLink to='/signin' smooth={true} duration={1000} offset={getOffset()} style={{textDecoration:"none",cursor:"none"}}>
+              <div className="nav-items" style={{color:scrolling?'#0f1922':"#f1f1f1"}}>
+              Login
+            </div>
+            </MyLink>
+      )}
+            {userTokenExists && (
+              <Link onClick={handleLogout} smooth={true} duration={1000} offset={getOffset()} style={{textDecoration:"none",cursor:"none"}}>
+              <div className="nav-items" style={{color:scrolling?'#0f1922':"#f1f1f1"}}>
+              Logout
+            </div>
+            </Link>
+      )}
         </div>
     </Box>
     {/* <Outlet /> */}

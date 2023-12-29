@@ -5,6 +5,7 @@ import img from "./Untitled-1.png"
 import { Link as MyLink} from 'react-scroll';
 import './Home.css'
 function Home() {
+  const userTokenExists = localStorage.getItem('userToken');
   const getOffset = () => {
     // Adjust offset based on screen size using media queries
     if (window.innerWidth < 600) {
@@ -25,9 +26,11 @@ function Home() {
       <video src='/videos/video-2.mp4' autoPlay loop muted />
       <Box sx={{ fontSize: {xs:"5rem",md:"10rem"}, fontWeight: "700", position: "absolute", bottom: "50vh", left: '50%',top:"50%", transform: "translate(-50%,-50%)", color: "#f1f1f1",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:'center' }}>Techtronix.
       <Box >
+        {!userTokenExists &&(
         <Link to="/signup">
         <Button variant='outlined' sx={{ color: "#f1f1f1", borderRadius: "0", borderColor: "#f1f1f1", fontSize: '1.6rem', margin: "0 1rem", cursor: "none",fontWeight:"600" }}>Register</Button>
         </Link>
+)}
         <MyLink to="about" smooth={true} duration={1000} offset={getOffset()}style={{textDecoration:"none",cursor:"none"}}>
         <Button variant='outlined' sx={{ color: "#f1f1f1", borderRadius: "0", borderColor: "#f1f1f1", fontSize: '1.6rem', margin: "0 1rem", cursor: "none",fontWeight:"600" }}>learn more</Button>
         </MyLink>
