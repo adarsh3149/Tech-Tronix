@@ -6,9 +6,13 @@ import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { Link } from 'react-router-dom';
 import img from "./poster_techtronix_just.png"
+import { ref, get, getDatabase } from 'firebase/database';
+import { Link,useNavigate } from 'react-router-dom';
+
+
 const SignUpForm = () => {
+    const navigate = useNavigate();
     const [values, setValues] = useState({
         
         email: '',
@@ -38,9 +42,43 @@ const SignUpForm = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', values);
+        try {
+            const email = values.email;
+            const password = values.password;
+    
+            // Check if the provided email exists in the database
+            const userRef = ref(getDatabase(), 'users');
+            const snapshot = await get(userRef);
+    
+            if (snapshot.exists()) {
+                const users = snapshot.val();
+    
+                // Find the user with the provided email
+                const userWithEmail = Object.values(users).find(user => user.email === email);
+    
+                if (userWithEmail && userWithEmail.password === password) {
+                    // Authentication successful
+                    console.log('User logged in successfully:', userWithEmail);
+    
+                    // Set the user token in localStorage (you might want to use a more secure method for tokens)
+                    localStorage.setItem('userToken', userWithEmail.email);
+    
+                    // Redirect to the home page
+                    navigate('/');
+                } else {
+                    console.error('Invalid email or password');
+                    // Handle invalid credentials (show an alert, set an error state, etc.)
+                }
+            } else {
+                console.error('No users found in the database');
+                // Handle no users in the database
+            }
+        } catch (error) {
+            console.error('Error logging in:', error.message);
+            // Handle login error (show an alert, set an error state, etc.)
+        }
     };
     console.log(values)
     return (
@@ -51,7 +89,7 @@ const SignUpForm = () => {
 <Box sx={{ flexGrow: "1", minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDrection: "column", padding: "4rem 0" }}>
             
             
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', width: '30rem', fontSize: "1.6rem", fontWeight: "400" }}>
+            <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', width: '30rem', fontSize: "1.6rem", fontWeight: "400" }}>
             <Box sx={{fontSize:"4rem",fontWeight:"600"}}>Sign in</Box>
                 <TextField
                     label="Email"

@@ -1,12 +1,26 @@
-import React from "react";
-// import Feature from "./Feature";
+import React from "react";// import Feature from "./Feature";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Box, Button } from "@mui/material";
 import { Talks_data } from "./Talks_data";
+import { ref, get, getDatabase } from 'firebase/database';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 import "./Modal.css"
 const Modal = ({ data, close }) => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   const { img, fullname, theme, description, rules, url, time, venue, istheme, isurl2,url2 } = data;
   const rule = rules?.map((e, index) => {
     return (
@@ -14,11 +28,60 @@ const Modal = ({ data, close }) => {
     )
   })
   const handleClick = (url) => {
-    window.location.href = url;
-  }
+    const userToken = localStorage.getItem('userToken');
+
+    if (userToken) {
+      // Check if the userToken matches an email in the database
+      const userRef = ref(getDatabase(), 'users');
+      get(userRef).then(snapshot => {
+        if (snapshot.exists()) {
+          const users = snapshot.val();
+          const userWithEmail = Object.values(users).find(user => user.email === userToken);
+
+          if (userWithEmail) {
+            // User is authenticated, proceed with the redirect
+            window.open(url, '_blank');
+          } else {
+            // User not found in the database, show alert and redirect to signup
+            handleClickOpen();
+          }
+        }
+      }).catch(error => {
+        console.error('Error checking userToken:', error.message);
+      });
+    } else {
+      // UserToken not found, show alert and redirect to signup
+      handleClickOpen();
+    }
+  };
+
   const handleClick2 = (url2) => {
-    window.location.href = url2;
-  }
+    const userToken = localStorage.getItem('userToken');
+
+    if (userToken) {
+      // Check if the userToken matches an email in the database
+      const userRef = ref(getDatabase(), 'users');
+      get(userRef).then(snapshot => {
+        if (snapshot.exists()) {
+          const users = snapshot.val();
+          const userWithEmail = Object.values(users).find(user => user.email === userToken);
+
+          if (userWithEmail) {
+            // User is authenticated, proceed with the redirect
+            window.open(url2, '_blank');
+          } else {
+            // User not found in the database, show alert and redirect to signup
+            handleClickOpen();
+          }
+        }
+      }).catch(error => {
+        console.error('Error checking userToken:', error.message);
+      });
+    } else {
+      // UserToken not found, show alert and redirect to signup
+      handleClickOpen();
+    }
+  };
   const modalVariants = {
     open: {
       opacity: 1,
@@ -47,6 +110,27 @@ const Modal = ({ data, close }) => {
 
   return (
     <>
+    <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title" sx={{textTransform:"none",fontSize:"22px",fontFamily:"Montserrat"}}>
+          {"Looks like you aren't logged in"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description" sx={{textTransform:"none",fontSize:"18px",fontFamily:"Montserrat"}}>
+            Do you want to proceed to login ?
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} sx={{textTransform:"none",fontSize:"16px",fontFamily:"Montserrat",color:"#3d3d3d"}}>Close</Button>
+          <Button href="/signin" autoFocus sx={{textTransform:"none",fontSize:"16px",fontFamily:"Montserrat",color:"#3d3d3d"}}>
+            Proceed
+          </Button>
+        </DialogActions>
+      </Dialog>
       <motion.div
         className="modal"
         variants={modalVariants}

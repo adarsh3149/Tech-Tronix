@@ -3,7 +3,6 @@ import Talk from "./Talk";
 import { Talks_data } from "./Talks_data";
 import AnimatedTitle from './AnimTitle';
 import Footer from './Footer'
-import { Box } from "@mui/material";
 function Talks({isimg}) {
   return (
     <>
