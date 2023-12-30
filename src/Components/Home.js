@@ -23,8 +23,11 @@ function Home() {
   return (
     <>
      <div className='hero-container'>
-      <video src='/videos/video-2.mp4' autoPlay loop muted />
-      <Box sx={{ fontSize: {xs:"5rem",md:"10rem"}, fontWeight: "700", position: "absolute", bottom: "50vh", left: '50%',top:"50%", transform: "translate(-50%,-50%)", color: "#f1f1f1",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:'center' }}>Techtronix.
+
+      {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
+      <Box component="img" src='logo-01.svg' sx={{width:"8vw",height:"auto"}}></Box>
+      <Box sx={{ fontSize: {xs:"4rem",md:"7rem"}, fontWeight: "700", display:"flex", color: "#f1f1f1",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:'center' }}>Techtronix
+      
       <Box >
         {!userTokenExists &&(
         <Link to="/signup">
