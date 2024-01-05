@@ -22,7 +22,7 @@ function Home() {
   // 0f19227
   return (
     <>
-      <div className='video-container' id='home' style={{ width:"100vw", height: "100vh", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center",position:"absolute",top:"0",left:"0",zIndex:"1",backgroundImage:`url(${img})` }}>
+     <div className='video-container' id='home' style={{ width:"100vw", height: "100vh", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center",position:"absolute",top:"0",left:"0",zIndex:"1",backgroundImage:`url(${img})` }}>
       
       
       <Box sx={{ fontSize: {xs:"5rem",md:"10rem"}, fontWeight: "700", position: "absolute", bottom: "50vh", left: '50%',top:"50%", transform: "translate(-50%,-50%)", color: "#f1f1f1",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:'center' }}>Techtronix.
