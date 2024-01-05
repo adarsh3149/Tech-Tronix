@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Listing from "./Listing";
 import Overlay from "./Overlay";
 import Modal from "./Modal";
@@ -6,7 +6,15 @@ import { AnimatePresence } from "framer-motion";
 
 const Card_main = ({ data }) => {
   const [open, setOpen] = useState(false);
-  open?document.body.style.overflow="hidden":document.body.style.overflow="auto";
+  useEffect(() => {
+    // Update body overflow when the modal is opened/closed
+    document.body.style.overflow = open ? "hidden" : "auto";
+
+    // Cleanup function to restore body overflow on component unmount
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
   const openModal = () => {
     setOpen(true);
   };

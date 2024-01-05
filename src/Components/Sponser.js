@@ -1,25 +1,31 @@
 import React, { useRef, useEffect, useState } from 'react';
 import AnimatedTitle from './AnimTitle';
-import { Box,Paper } from '@mui/material';
+import { Box, Paper } from '@mui/material';
 import styled, { keyframes, css } from "styled-components";
 
 const Sponser = () => {
   const [speed, setSpeed] = useState(2);
   const row1 = [
     "/images/MCL_prev_ui.png",
+    "/images/jsw-group-vector-logo_prev_ui.png",
   ];
 
   const row2 = [
-    "IEEE ITR CHANDIPUR CHAPTER",
-    "/images/IEEE BBSR section_prev_ui.png",
+
+    "/images/IEEE ITR (2)_prev_ui.png",
+    "/images/image-removebg-preview (13).png",
     "/images/IEEE power electronics_prev_ui.png",
-    "IEEE ITR CHANDIPUR CHAPTER",
-    "/images/IEEE BBSR section_prev_ui.png",
+    "/images/IEEE ITR (2)_prev_ui.png",
+    "/images/image-removebg-preview (13).png",
     "/images/IEEE power electronics_prev_ui.png",
+  ];
+  const row4 = [
+    "/images/IEEE vssut_prev_ui.png",
+    
   ];
   return (
     <>
-      <div className='heading' id='sponsers'><AnimatedTitle name="sponsers." /></div>
+      <div className='heading' id='sponsers'><AnimatedTitle name="sponsors." /></div>
 
       <Box
         sx={{
@@ -29,28 +35,7 @@ const Sponser = () => {
           letterSpacing: "0.5rem",
         }}
       >
-        PROUD SPONSER .
-      </Box>
-
-      <Paper elevation={0} sx={{ backgroundColor: "transparent", width: { xs: "24rem", md: "25rem" }, padding: "2rem",marginLeft:"2rem", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-        <Box sx={{ fontWeight: "600", fontSize: "1.6rem" }}> {row1.map((el) => (
-                <ImageGroup>
-                  <Image src={el} />
-                </ImageGroup>
-              ))}
-        </Box>
-
-      </Paper>
-
-      <Box
-        sx={{
-          fontSize: "2rem",
-          margin: "0 4rem",
-          fontWeight: "400",
-          letterSpacing: "0.5rem",
-        }}
-      >
-        Technical SPONSER .
+        PROUD SPONSORS .
       </Box>
 
       <Box sx={{ display: "flex", justifyContent: "center", overflow: "hidden" }}>
@@ -60,20 +45,87 @@ const Sponser = () => {
         <Wrapper>
 
           <Marquee>
-            <MarqueeGroup>
+
+            {row1.map((el) => (
+              <ImageGroup>
+                <Image src={el} />
+              </ImageGroup>
+            ))}
+
+
+
+          </Marquee>
+
+        </Wrapper>
+
+
+      </Box>
+
+      <Box
+        sx={{
+          fontSize: "2rem",
+          margin: "0 4rem",
+          fontWeight: "400",
+          letterSpacing: "0.5rem",
+        }}
+      >
+        Technical SPONSORS .
+      </Box>
+
+      <Box sx={{ display: "flex", justifyContent: "center", overflow: "hidden" }}>
+
+
+
+        <Wrapper>
+
+          <Marquee>
+            <MarqueeGroup2>
               {row2.map((el) => (
                 <ImageGroup>
                   <Image src={el} />
                 </ImageGroup>
               ))}
-            </MarqueeGroup>
-            <MarqueeGroup>
+            </MarqueeGroup2>
+            <MarqueeGroup2>
               {row2.map((el) => (
                 <ImageGroup>
                   <Image src={el} />
                 </ImageGroup>
               ))}
-            </MarqueeGroup>
+            </MarqueeGroup2>
+          </Marquee>
+
+        </Wrapper>
+
+
+      </Box>
+     
+      <Box
+        sx={{
+          fontSize: "2rem",
+          margin: "0 4rem",
+          fontWeight: "400",
+          letterSpacing: "0.5rem",
+        }}
+      >
+        Supported By .
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "center", overflow: "hidden" }}>
+
+
+
+        <Wrapper>
+
+          <Marquee>
+
+            {row4.map((el) => (
+              <ImageGroup>
+                <Image src={el} />
+              </ImageGroup>
+            ))}
+
+
+
           </Marquee>
 
         </Wrapper>

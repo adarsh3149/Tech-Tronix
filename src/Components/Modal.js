@@ -21,10 +21,10 @@ const Modal = ({ data, close }) => {
   const handleClose = () => {
     setOpen(false);
   };
-  const { img, fullname, theme, description, rules, url, time, venue, istheme, isurl2,url2 } = data;
+  const {img, fullname, theme, description, rules, url, time, venue, istheme, isurl2,url2, isprob,isRule} = data;
   const rule = rules?.map((e, index) => {
     return (
-      <li style={{ color: "#737373", fontSize: "1.25rem", fontWeight: "600", margin: "1rem 0", textTransform: 'none' }}>{e}</li>
+      <li style={{ color: "#737373", fontSize: "1.25rem", fontWeight: "500", margin: "1rem 0", textTransform: 'none' }}>{e}</li>
     )
   })
   const handleClick = async (url) => {
@@ -90,6 +90,27 @@ const handleClick2 = async (url2) => {
   }
 };
 
+ // Function will execute on click of button
+ const handleDownload = () => {
+  // Assuming pdfFile is the URL or Blob of your PDF file
+  const pdfFile = '/docs/HACKSPHERE problem statement.pdf';
+
+  // Create a hidden anchor element
+  const anchor = document.createElement('a');
+  anchor.style.display = 'none';
+  document.body.appendChild(anchor);
+
+  // Set the href and download attributes to trigger download
+  anchor.href = pdfFile;
+  anchor.download = 'HackSphere Problem Statement';
+
+  // Trigger a click event to start the download
+  anchor.click();
+
+  // Remove the anchor from the DOM
+  document.body.removeChild(anchor);
+};
+
   const modalVariants = {
     open: {
       opacity: 1,
@@ -123,6 +144,7 @@ const handleClick2 = async (url2) => {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        disableScrollLock={true} 
       >
         <DialogTitle id="alert-dialog-title" sx={{textTransform:"none",fontSize:"22px",fontFamily:"Montserrat"}}>
           {"Looks like you aren't logged in"}
@@ -134,9 +156,11 @@ const handleClick2 = async (url2) => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} sx={{textTransform:"none",fontSize:"16px",fontFamily:"Montserrat",color:"#3d3d3d"}}>Close</Button>
-          <Button href="/signin" autoFocus sx={{textTransform:"none",fontSize:"16px",fontFamily:"Montserrat",color:"#3d3d3d"}}>
+          <Link to='/signin'>
+          <Button  autoFocus sx={{textTransform:"none",fontSize:"16px",fontFamily:"Montserrat",color:"#3d3d3d"}}>
             Proceed
           </Button>
+          </Link>
         </DialogActions>
       </Dialog>
       <motion.div
@@ -156,7 +180,7 @@ const handleClick2 = async (url2) => {
               <span className="modal__price">{fullname}</span>
             </Box>
           </motion.div>
-          {istheme ? <motion.div className="modal__row" variants={modalRowVariants}>
+          {istheme  ? <motion.div className="modal__row" variants={modalRowVariants}>
             <Box sx={{ fontSize: "2rem", fontWeight: "600", margin: "0" }}>
               Theme :-
               <p className="modal__description">{theme}</p>
@@ -177,7 +201,7 @@ const handleClick2 = async (url2) => {
             className="modal__description-wrapper"
             variants={modalRowVariants}
           >
-            <Box sx={{ fontSize: "2rem", fontWeight: "600", }}>
+            {isRule ? (<Box sx={{ fontSize: "2rem", fontWeight: "600", }}>
               Rules
               <p className="modal__description">{rule}</p>
 
@@ -190,10 +214,35 @@ const handleClick2 = async (url2) => {
               Venue :- <span style={{ fontSize: "2rem" }} className="modal__description">{venue}</span>
 
             </Box>
-            </Box>
+            </Box>):""}
+            {isprob?
+            <>
+            <Button onClick={handleDownload}
+            variant="outlined"
+            sx={{
+              color: "#f1f1f1",
+              borderRadius: "10px",
+              fontSize: "1.6rem",
+              marginTop: "1.5rem 0 ",
+              top: "1rem",
+              fontWeight: "600",
+              backgroundColor: "#0f1922",
+              ":hover": { color: "#0f1922" },
+            }}
+          >
+            DownLoad Problem Statement 
+          </Button>
+            </>
+            
+            :""}
             
           </motion.div>
-
+          {isurl2 ?
+          <>
+          <Box sx={{
+            display:"flex",
+            flexDirection:"column"
+          }}>
           <Button onClick={() => handleClick(url)}
             variant="outlined"
             sx={{
@@ -207,49 +256,66 @@ const handleClick2 = async (url2) => {
               ":hover": { color: "#0f1922" },
             }}
           >
-            Register
-          </Button>
-          {isurl2 ?
-            <Box sx={{
-              // backgroundColor:"red",
-              // height:"10rem",
-              display:"flex",
-              marginTop:"1.5rem",
-              // justifyContent:"flex-start",
-              // alignItems:"flex-start",
-
-            }}>
-              <Button onClick={() => handleClick2(url2)}
-                variant="outlined"
-                sx={{
-                  color: "#f1f1f1",
-                  borderRadius: "10px",
-                  fontSize: "1.6rem",
-                  
-                  
-                  fontWeight: "600",
-                  backgroundColor: "#0f1922",
-                  ":hover": { color: "#0f1922" },
-                }}
-              >
-                Register
-
-              </Button>  <span style={{
+            Register <span style={{
                 // backgroundColor: "red",
                 position:"relative",
-                fontSize:"2rem",
-                fontWeight:"600",
+                fontSize:"1.5rem",
+                fontWeight:"400",
                 display:"flex",
                 // margin:"2rem ",
                 padding:"1.3rem ",
                 justifyContent:"flex-start",
               alignItems:"flex-start"
                 
-              }}>: - For School students</span>
-            </Box>
-              
+              }}>: - For College students</span>
+          </Button>
+          
             
-            : ''}
+              <Button onClick={() => handleClick2(url2)}
+                variant="outlined"
+                sx={{
+                  color: "#f1f1f1",
+                  borderRadius: "10px",
+                  fontSize: "1.6rem",
+                  marginTop:"2rem",
+                  
+                  fontWeight: "600",
+                  backgroundColor: "#0f1922",
+                  ":hover": { color: "#0f1922" },
+                }}
+              >
+                Register  <span style={{
+                // backgroundColor: "red",
+                position:"relative",
+                fontSize:"1.5rem",
+                fontWeight:"400",
+                display:"flex",
+                // margin:"2rem ",
+                padding:"1.3rem ",
+                justifyContent:"center",
+              alignItems:"center"
+                
+              }}>: - For School students</span>
+
+              </Button > 
+            
+            </Box>  
+            </>
+            : (<Button onClick={() => handleClick(url)}
+            variant="outlined"
+            sx={{
+              color: "#f1f1f1",
+              borderRadius: "10px",
+              fontSize: "1.6rem",
+              marginTop: "1.5rem 0 ",
+              top: "1rem",
+              fontWeight: "600",
+              backgroundColor: "#0f1922",
+              ":hover": { color: "#0f1922" },
+            }}
+          >
+            Register
+          </Button>)}
 
 
 

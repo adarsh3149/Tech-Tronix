@@ -6,6 +6,8 @@ export const Event_data = [
         img: "/images/img-3.png",
         istheme: true,
         isurl2: false,
+        isRule:true,
+        isprob: false,
         theme: "Electronics Sustainability",
         description: `“In a world flooded with information, capturing attention is an art.” 
         Let’s explore the significance of poster representation and the unique power it holds in conveying ideas. The Poster presentation competition “Posterama” is an innovative and an impactful opportunity to showcase graphic skills and potential in the field of graphic design and art.
@@ -28,7 +30,9 @@ export const Event_data = [
         fullname: "Code-fest - Code Compendium",
         img: "/images/img-2.png",
         isurl2: false,
+        isRule:true,
         istheme: false,
+        isprob: false,
         description: `“The only way to do great work is to love what you do.”
         Display your problem-solving prowess. Tread through the branches of algorithms into the world of loops and queues and partake in the exhilarating coding competition, CODE COMPENDIUM . This event offers a remarkable opportunity for you to showcase your coding prowess and bask in the limelight of your brilliance. 
         As we open the gates, the virtual realm awaits your keystrokes, challenging your coding expertise like never before.
@@ -46,6 +50,8 @@ export const Event_data = [
         name: "LOGIC LABYRINTH",
         istheme: true,
         isurl2: false,
+        isRule:true,
+        isprob: false,
         fullname: "Circuit Modelling/Designing - LOGIC LABYRINTH",
         theme: "To find the solution to the technical problems in our society by using basic circuital elements such as resistor, capacitor,transistors.",
         img: "/images/img-4.jpg",
@@ -67,33 +73,18 @@ export const Event_data = [
         id: 4,
         name: "HACKSPHERE",
         fullname: "Internal Hackathon - HACKSPHERE",
-        img: "/images/img-1.png",
+        img: "/images/hacksphere4.png",
         istheme: false,
         isurl2: false,
+        isRule:true,
+        isprob: true,
         description: `"Innovation is taking two things that already exist and putting them together in a new way"
         In this competitive world, success is accompanied by the uniqueness of individuals. Catalyse is a profound paradigm shift in our world through the revolutionary power of innovation and technology. The HACKSPHERE is an innovative, impact-driven idea-thinking competition that challenges teams of 4 students to collaboratively solve multifaceted problem statements ranging from varied domains.
         While working on these innovative and creative projects your Intellectual stimulation, Personal Growth, Professional development, and Competitive advantage opportunities are enhanced.
         The EL & TC Society invites you to be a part of our technical fest, TECHTRONIX. Join us in the HACKSPHERE where your ingenuity can tackle real-world challenges and build solutions that truly make a difference.
         Winners will be rewarded with exciting prizes!!`
         ,
-        rules: ["Participation for the event will be only accepted for groups", "Each group must contain 2 members.", "The participants should be of School of electrical sciences (ETC,EEE,EE)", "In first round Each team will have to submit an abstact within 200 word.", " In the second round the selected teams will have to prepare PPT (PPT format will be provided)", "Each team will get 3 to 4 minutes to present their PPT.", "Each participant can take part in not more than 2 teams", "The teams select their topic form the topics mentioned below :-",
-            "Underwater Communication",
-            "Smart Automation",
-            "Robotics and Drones",
-            "Agriculture/Rural development",
-            "Waste Management",
-            "Renewable Resources",
-            "Smart Education",
-            "Space technology",
-            "5G TechnoloGY",
-            "Mining",
-            "Disaster Management",
-            "Cyber Security",
-            "VLSI",
-            "IOT",
-            "AI/ML"
-                
-        ],
+        rules: ["Participation for the event will be only accepted for groups","Each group must contain 2 members.","In first round Each team will have to submit an abstact within 200 word.","In the second round the selected teams will have to prepare PPT (PPT format will be provided).","Each team will get 3 to 4 minutes to present their PPT.","Each participant can take part in not more than 2 teams." ],
         time: `19.01.2024 - 2.15pm`,
         venue: "E.Learning VSSUT",
         url : 'https://docs.google.com/forms/d/1vAAp9cNJzNG5288mYejYCSZ9v0tZ7hH_NloVI1N6cjw/viewform?edit_requested=true'
@@ -105,6 +96,8 @@ export const Event_data = [
         img:"/images/img-6.jpg",
         istheme: false,
         isurl2: false,
+        isRule:true,
+        isprob: false,
         description:`“Seek and Uncover!”
             Treasure hunts are information - based scavenger hunts, or puzzle hunts, in which teams use their collective brainpower to solve clues.Each team is presented with a group of puzzles, or clues, which teams must solve to find a piece of information.
         This event improves our critical thinking ability, enhances our power to comprehend statements, and promotes teamwork and problem- solving skills to boost our imagination.
@@ -124,6 +117,8 @@ export const Event_data = [
         img:"/images/img-5.png",
         istheme: true,
         isurl2: true,
+        isRule:true,
+        isprob: false,
         theme:"Space Quiz",
         description:`"In the arena of the mind, every participant is a champion."  
 
@@ -138,5 +133,27 @@ export const Event_data = [
         venue: "E.Learning VSSUT",
         url : 'https://docs.google.com/forms/d/1JFt4siGQf-X6k167-4baQ1IzkWgQjoVTXTmsbn9ArFg/viewform?chromeless=1&edit_requested=true&fbzx=2440563557209694685',
         url2 : 'https://docs.google.com/forms/u/0/d/1v-G7XPctYdcShfdHLoNvo2hhpX1JsKW_j9W0bRm5Dzw/viewform?edit_requested=true',
+    },
+    {
+        id:7,
+        name:"Fun Quiz",
+        fullname:"Quiz Competition - Fun Quiz",
+        img:"/images/Depa_20231230_102933_0000.png",
+        istheme: false,
+        isurl2: false,
+        isRule:false,
+        isprob: false,
+        theme:"Space Quiz",
+        description:`Welcome to the Fun-tastic Quiz Extravaganza! 🚀🤖
+
+        Where knowledge meets fun in the electrifying world of technology! As we kick off the annual celebration of innovation hosted by the EL&TC Society, get ready to unleash your inner fun genius with our Ultimate Fun-tastic Quiz. This quiz is designed to tickle your funny bone, challenge your tech prowess, and leave you grinning from ear to ear. So, let the circuits of your brain spark with excitement as you dive into this electrifying and amusing journey. Buckle up for a ride through the realms of laughter and tech wizardry, and let the good times roll! 🎉💻
+        
+        `
+        ,
+        
+        time: `15.01.2024`,
+        venue: "Golden Jublee Seminar hall",
+        url : 'https://docs.google.com/forms/d/16dCsPLFa0kVObkw-tuqBXiLknOl9BNE62sYI09ZufKw/edit',
+        
     },
 ]

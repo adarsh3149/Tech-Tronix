@@ -1,13 +1,13 @@
-// import "./App.css";
-import Talk from "./Talk";
+
+
 import { Event_data } from "./Event_data";
 import AnimatedTitle from './AnimTitle';
-import Footer from './Footer'
+
 import Card_main from "./Card_main";
-import Card_comp from "./Card_comp";
+
 import { Button } from "@mui/material";
 import { useLocation, Link } from "react-router-dom";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 function Events() {
   const location = useLocation();
 
@@ -24,22 +24,22 @@ function Events() {
         justifyContent: "center",
 
       }}>
-        
 
-          {Event_data.map((item,index) => (
-            <motion.div
+
+        {Event_data.map((item, index) => (
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.1, type: "spring", stiffness: 80, delay: index / 2 * 0.2 + 0.5 }}
-  
-  
+
+
           >
             <Card_main data={item} key={item.id} />
-            </motion.div>
-          ))}
+          </motion.div>
+        ))}
 
-        
+
 
       </div>
       <div style={{

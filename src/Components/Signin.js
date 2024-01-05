@@ -44,41 +44,44 @@ const SignUpForm = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        try {
-            const email = values.email;
-            const password = values.password;
-    
-            // Check if the provided email exists in the database
-            const userRef = ref(getDatabase(), 'users');
-            const snapshot = await get(userRef);
-    
-            if (snapshot.exists()) {
-                const users = snapshot.val();
-    
-                // Find the user with the provided email
-                const userWithEmail = Object.values(users).find(user => user.email === email);
-    
-                if (userWithEmail && userWithEmail.password === password) {
-                    // Authentication successful
-                    console.log('User logged in successfully:', userWithEmail);
-    
-                    // Set the user token in localStorage (you might want to use a more secure method for tokens)
-                    localStorage.setItem('userToken', userWithEmail.email);
-    
-                    // Redirect to the home page
-                    navigate('/');
-                } else {
-                    console.error('Invalid email or password');
-                    // Handle invalid credentials (show an alert, set an error state, etc.)
-                }
+    try {
+        const email = values.email;
+        const password = values.password;
+
+        // Check if the provided email exists in the database
+        const userRef = ref(getDatabase(), 'users');
+        const snapshot = await get(userRef);
+
+        if (snapshot.exists()) {
+            const users = snapshot.val();
+
+            // Find the user with the provided email
+            const userWithEmail = Object.values(users).find(user => user.email === email);
+
+            if (userWithEmail && userWithEmail.password === password) {
+                // Authentication successful
+                console.log('User logged in successfully:', userWithEmail);
+
+                // Set the user token in localStorage (you might want to use a more secure method for tokens)
+                localStorage.setItem('userToken', userWithEmail.email);
+
+                // Redirect to the home page
+                navigate('/');
             } else {
-                console.error('No users found in the database');
-                // Handle no users in the database
+                // Handle invalid credentials (show an alert, set an error state, etc.)
+                console.error('Invalid email or password');
+                alert('Invalid Credentials');
             }
-        } catch (error) {
-            console.error('Error logging in:', error.message);
-            // Handle login error (show an alert, set an error state, etc.)
+        } else {
+            // Handle no users in the database
+            console.error('No users found in the database');
+            alert('No users found in the database');
         }
+    } catch (error) {
+        // Handle login error (show an alert, set an error state, etc.)
+        console.error('Error logging in:', error.message);
+        alert('Error logging in');
+    }
     };
     console.log(values)
     return (

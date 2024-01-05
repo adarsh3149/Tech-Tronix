@@ -1,7 +1,7 @@
-import { Box, Button, Typography } from '@mui/material'
-import React, {useState} from 'react'
+import { Box, Button } from '@mui/material'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import img from "./Untitled-1.png"
+import img from "./helo.png"
 import { Link as MyLink} from 'react-scroll';
 import './Home.css'
 function Home() {
@@ -22,8 +22,9 @@ function Home() {
   // 0f19227
   return (
     <>
-     <div className='hero-container'>
-      <video src='/videos/video-2.mp4' autoPlay loop muted />
+      <div className='video-container' id='home' style={{ width:"100vw", height: "100vh", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center",position:"absolute",top:"0",left:"0",zIndex:"1",backgroundImage:`url(${img})` }}>
+      
+      
       <Box sx={{ fontSize: {xs:"5rem",md:"10rem"}, fontWeight: "700", position: "absolute", bottom: "50vh", left: '50%',top:"50%", transform: "translate(-50%,-50%)", color: "#f1f1f1",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:'center' }}>Techtronix.
       <Box >
         {!userTokenExists &&(
@@ -51,13 +52,3 @@ function Home() {
 export default Home
 
 
-{/* <Box sx={{ fontSize: {xs:"5rem",md:"10rem"}, fontWeight: "600", position: "absolute", bottom: "5vh", left: '50%', transform: "translate(-50%,-50%)", color: "#f1f1f1",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:'center' }}>Techtronix.
-      <Box >
-        <Link to="/signup">
-        <Button variant='outlined' sx={{ color: "#f1f1f1", borderRadius: "0", borderColor: "#f1f1f1", fontSize: '1.6rem', margin: "0 1rem", cursor: "none",fontWeight:"600" }}>Register</Button>
-        </Link>
-        <MyLink to="about" smooth={true} duration={1000} offset={getOffset()}style={{textDecoration:"none",cursor:"none"}}>
-        <Button variant='outlined' sx={{ color: "#f1f1f1", borderRadius: "0", borderColor: "#f1f1f1", fontSize: '1.6rem', margin: "0 1rem", cursor: "none",fontWeight:"600" }}>learn more</Button>
-        </MyLink>
-      </Box>
-      </Box> */}

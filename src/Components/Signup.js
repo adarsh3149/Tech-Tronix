@@ -121,9 +121,11 @@ const SignUpForm = () => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} sx={{textTransform:"none",fontSize:"16px",fontFamily:"Montserrat",color:"#3d3d3d"}}>Close</Button>
-          <Button href="/signin" autoFocus sx={{textTransform:"none",fontSize:"16px",fontFamily:"Montserrat",color:"#3d3d3d"}}>
+          <Link to='/signin'>
+          <Button  autoFocus sx={{textTransform:"none",fontSize:"16px",fontFamily:"Montserrat",color:"#3d3d3d"}}>
             Proceed
           </Button>
+          </Link>
         </DialogActions>
       </Dialog>
         <Box sx={{ display: "flex" ,textTransform:"capitalize"}}>
