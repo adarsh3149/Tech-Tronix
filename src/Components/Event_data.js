@@ -84,7 +84,7 @@ export const Event_data = [
         The EL & TC Society invites you to be a part of our technical fest, TECHTRONIX. Join us in the HACKSPHERE where your ingenuity can tackle real-world challenges and build solutions that truly make a difference.
         Winners will be rewarded with exciting prizes!!`
         ,
-        rules: ["Participation for the event will be only accepted for groups","Each group must contain 2 members.","In first round Each team will have to submit an abstact within 200 word.","In the second round the selected teams will have to prepare PPT (PPT format will be provided).","Each team will get 3 to 4 minutes to present their PPT.","Each participant can take part in not more than 2 teams." ],
+        rules: ["Participation for the event will be only accepted for groups.","Each group must contain 4 members.","In first round, Each team will have to submit an abstact within 200 word.","In the second round the selected teams will have to prepare PPT (PPT format will be provided).","Each team will get 2 to 3 minutes to present their PPT.","Each participant can only participate in one problem statement." ],
         time: `19.01.2024 - 2.15pm`,
         venue: "E.Learning VSSUT",
         url : 'https://docs.google.com/forms/d/1vAAp9cNJzNG5288mYejYCSZ9v0tZ7hH_NloVI1N6cjw/viewform?edit_requested=true'
