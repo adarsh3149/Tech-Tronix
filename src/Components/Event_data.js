@@ -51,7 +51,7 @@ export const Event_data = [
         istheme: true,
         isurl2: false,
         isRule:true,
-        isprob: false,
+        isprob: true,
         fullname: "Circuit Modelling/Designing - LOGIC LABYRINTH",
         theme: "To find the solution to the technical problems in our society by using basic circuital elements such as resistor, capacitor,transistors.",
         img: "/images/img-4.jpg",
