@@ -3,6 +3,7 @@ import Listing from "./Listing";
 import Overlay from "./Overlay";
 import Modal from "./Modal";
 import { AnimatePresence } from "framer-motion";
+import Modal2 from "./Modal2";
 
 const Card_main = ({ data }) => {
   const [open, setOpen] = useState(false);

@@ -11,7 +11,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import "./Modal.css"
-const Modal = ({ data, close }) => {
+import { Mode } from "@mui/icons-material";
+const Modal2 = ({ data, close }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -91,11 +92,11 @@ const handleClick2 = async (url2) => {
 };
 
  // Function will execute on click of button
-  const handleDownload = () => {
+ const handleDownload = () => {
   // Assuming pdfFile is the URL or Blob of your PDF file
-  if (fullname==="Internal Hackathon - HACKSPHERE"){
-    const pdfFile = '/docs/HACKSPHERE problem statement.pdf';
-    // Create a hidden anchor element
+  const pdfFile = '/docs/HACKSPHERE problem statement.pdf';
+
+  // Create a hidden anchor element
   const anchor = document.createElement('a');
   anchor.style.display = 'none';
   document.body.appendChild(anchor);
@@ -109,25 +110,6 @@ const handleClick2 = async (url2) => {
 
   // Remove the anchor from the DOM
   document.body.removeChild(anchor);
-  } else if (fullname==="Circuit Modelling/Designing - LOGIC LABYRINTH"){
-    const pdfFile2 = '/docs/Techtronix Circuits and Modelling .pdf';
-    // Create a hidden anchor element
-    const anchor = document.createElement('a');
-    anchor.style.display = 'none';
-    document.body.appendChild(anchor);
-
-  // Set the href and download attributes to trigger download
-    anchor.href = pdfFile2;
-    anchor.download = 'Circuit Design Problem Statement';
-
-  // Trigger a click event to start the download
-    anchor.click();
-
-  // Remove the anchor from the DOM
-    document.body.removeChild(anchor);
-  };
-
-  
 };
 
   const modalVariants = {
@@ -234,7 +216,7 @@ const handleClick2 = async (url2) => {
 
             </Box>
             </Box>):""}
-            {(isprob)?
+            {isprob?
             <>
             <Button onClick={handleDownload}
             variant="outlined"
@@ -254,44 +236,6 @@ const handleClick2 = async (url2) => {
             </>
             
             :""}
-            {/* if (isprob&&(fullname==="Internal Hackathon - HACKSPHERE")){
-              <>
-            <Button onClick={handleDownload}
-            variant="outlined"
-            sx={{
-              color: "#f1f1f1",
-              borderRadius: "10px",
-              fontSize: "1.6rem",
-              marginTop: "1.5rem 0 ",
-              top: "1rem",
-              fontWeight: "600",
-              backgroundColor: "#0f1922",
-              ":hover": { color: "#0f1922" },
-            }}
-          >
-            DownLoad Problem Statement 
-          </Button>
-            </>
-            }elseif (isprob&&(fullname==="Circuit Modelling/Designing - LOGIC LABYRINTH")){
-              <>
-            <Button onClick={handleDownload2}
-            variant="outlined"
-            sx={{
-              color: "#f1f1f1",
-              borderRadius: "10px",
-              fontSize: "1.6rem",
-              marginTop: "1.5rem 0 ",
-              top: "1rem",
-              fontWeight: "600",
-              backgroundColor: "#0f1922",
-              ":hover": { color: "#0f1922" },
-            }}
-          >
-            DownLoad Problem Statement 
-          </Button>
-            </>
-            }   */}
-            
             
           </motion.div>
           {isurl2 ?
@@ -390,4 +334,4 @@ const handleClick2 = async (url2) => {
   );
 };
 
-export default Modal;
+export default Modal2;
