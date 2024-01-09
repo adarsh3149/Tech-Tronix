@@ -1,10 +1,10 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import AnimatedTitle from './AnimTitle';
-import { Box, Paper } from '@mui/material';
+import { Box } from '@mui/material';
 import styled, { keyframes, css } from "styled-components";
 
 const Sponser = () => {
-  const [speed, setSpeed] = useState(2);
+  
   const row1 = [
     "/images/MCL_prev_ui.png",
     "/images/jsw-group-vector-logo_prev_ui.png",
@@ -138,9 +138,7 @@ const Sponser = () => {
 
 export default Sponser;
 
-const AppContainer = styled.div`
-  
-`;
+
 
 const Wrapper = styled.div`
   width: 100%;
@@ -152,16 +150,9 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-const Text = styled.div`
- 
-`;
 
-const Note = styled.div`
-  font-size: 1.6rem;
-  font-weight: 200;
-  margin-bottom: 4rem;
-  color: #7c8e9a;
-`;
+
+
 
 const Marquee = styled.div`
   display: flex;
@@ -197,9 +188,7 @@ const common = css`
   animation: ${scrollX} 30s linear infinite;
 `;
 
-const MarqueeGroup = styled.div`
-  ${common}
-`;
+
 const MarqueeGroup2 = styled.div`
   ${common}
   animation-direction: reverse;

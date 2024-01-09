@@ -1,15 +1,14 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Navbar2 from './Components/Navbar2';
 // import { animateScroll as scroll } from 'react-scroll';
 import { useRef } from 'react';
 import Events from './Components/Events';
 import Member from './Components/Member';
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import Schedule from './Components/Schedule';
 import Home from './Components/Home';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import {  animateScroll as scroll } from 'react-scroll';
 import { Box } from '@mui/material';
 import Sponser from './Components/Sponser';
 import Footer from './Components/Footer';

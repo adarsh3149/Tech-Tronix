@@ -1,7 +1,5 @@
 import React from "react";
 import { Box } from "@mui/material";
-import Card_comp from "./Card_comp";
-import Membercard from "./MemberCard";
 import AnimatedTitle from "./AnimTitle";
 import Name from "./Name";
 
