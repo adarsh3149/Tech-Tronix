@@ -3,7 +3,6 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Box, Button } from "@mui/material";
-import { Talks_data } from "./Talks_data";
 import { ref, get, getDatabase } from 'firebase/database';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
