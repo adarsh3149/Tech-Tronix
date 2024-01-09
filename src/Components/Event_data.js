@@ -84,7 +84,7 @@ export const Event_data = [
         The EL & TC Society invites you to be a part of our technical fest, TECHTRONIX. Join us in the HACKSPHERE where your ingenuity can tackle real-world challenges and build solutions that truly make a difference.
         Winners will be rewarded with exciting prizes!!`
         ,
-        rules: ["Participation for the event will be only accepted for groups.","Each group must contain 4 members.","In first round, Each team will have to submit an abstact within 200 word.","In the second round the selected teams will have to prepare PPT (PPT format will be provided).","Each team will get 2 to 3 minutes to present their PPT.","Each participant can only participate in one problem statement." ],
+        rules: ["Participation for the event will be only accepted for groups.","Each group must contain 4 members.","In first round, Each team will have to submit an abstact within 200 word along with PPT.","Each team will get 2 to 3 minutes to present their PPT.","In the second round, the selected teams will have to prepare the solution for their respective problem statement.","Each participant can only participate in one group." ],
         time: `19.01.2024 - 2.15pm`,
         venue: "E.Learning VSSUT",
         url : 'https://docs.google.com/forms/d/1vAAp9cNJzNG5288mYejYCSZ9v0tZ7hH_NloVI1N6cjw/viewform?edit_requested=true'
@@ -128,7 +128,7 @@ export const Event_data = [
         ,
         rules:["Theme of the quiz: Space Quiz.","The quiz will be conducted in two rounds.","The top performers in the first round shall move on to the second round.","Team size: 2 members in each team.","The decision made by QuizMaster is final in the event of a dispute."
         ],
-        time: `19.01.2024 - 4.00pm
+        time: `19.01.2024 and 20.01.2024
     `,
         venue: "E.Learning VSSUT",
         url : 'https://docs.google.com/forms/d/1JFt4siGQf-X6k167-4baQ1IzkWgQjoVTXTmsbn9ArFg/viewform?chromeless=1&edit_requested=true&fbzx=2440563557209694685',
