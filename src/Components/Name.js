@@ -1,4 +1,4 @@
-import { Box, Paper, Typography } from '@mui/material'
+import { Box, Paper } from '@mui/material'
 import React from 'react'
 
 function Name({name,desig,isdesig}) {
