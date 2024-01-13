@@ -2,8 +2,9 @@
 import Talk from "./Talk";
 import { Talks_data } from "./Talks_data";
 import AnimatedTitle from './AnimTitle';
-import Footer from './Footer'
+import Footer from './Footer';
 import { Box } from "@mui/material";
+import { motion } from "framer-motion";
 function Talks({isimg}) {
   return (
     <>
@@ -20,11 +21,23 @@ function Talks({isimg}) {
       //  backgroundColor:"red",
        margin:"0 1rem" 
       }}>
-       {isimg ?
+      {Talks_data.map((item, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.1, type: "spring", stiffness: 80, delay: index / 2 * 0.2 + 0.5 }}
+
+
+          >
+            <Talk data={item} key={item.id} />
+          </motion.div>
+        ))}
+       {/* {isimg ?
         Talks_data.map((item) => (
           <Talk data={item} key={item.id} />
-        )):
-        <div style={{
+        )): */}
+        {/* <div style={{
           width:'100%',
           fontSize:"3rem",
           fontWeight:"500",
@@ -33,9 +46,9 @@ function Talks({isimg}) {
           alignItems:"flex-start",
           margin:"0 1rem"
         }}>
-          coming soon . . .
-        </div>
-        }
+          
+        </div> */}
+        {/* } */}
         
       </div>
 

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Listing from "./Listing";
 import Overlay from "./Overlay";
-import Modal from "./Modal";
+import Modal from "./Modal3";
+import Talk_listing from "./Talk_listing";
 import { AnimatePresence } from "framer-motion";
 
 const Talk = ({ data }) => {
@@ -17,7 +18,8 @@ const Talk = ({ data }) => {
 
   return (
     <>
-      <Listing data={data} open={openModal} />
+
+      <Talk_listing data={data} open={openModal} />
       <AnimatePresence>
         {open && (
           <Overlay close={closeModal}>

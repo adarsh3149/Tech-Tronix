@@ -109,7 +109,7 @@ const handleClick2 = async (url2) => {
   // Remove the anchor from the DOM
   document.body.removeChild(anchor);
   } else if (fullname==="Circuit Modelling/Designing - LOGIC LABYRINTH"){
-    const pdfFile2 = '/docs/Techtronix Circuits and Modelling .pdf';
+    const pdfFile2 = '/docs/Techtronix Circuits and Modelling.pdf';
     // Create a hidden anchor element
     const anchor = document.createElement('a');
     anchor.style.display = 'none';
@@ -326,7 +326,7 @@ const handleClick2 = async (url2) => {
               }}>: - For College students</span>
           </Button>
           
-            
+            <></>
               <Button onClick={() => handleClick2(url2)}
                 variant="outlined"
                 sx={{
