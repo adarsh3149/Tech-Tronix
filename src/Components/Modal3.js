@@ -22,73 +22,73 @@ const Modal3 = ({ data, close }) => {
     setOpen(false);
   };
   const {img, fullname, theme, description, rules, url, time, venue, istheme, isurl2,url2, isprob,isRule} = data;
-  const rule = rules?.map((e, index) => {
-    return (
-      <li style={{ color: "#737373", fontSize: "1.25rem", fontWeight: "500", margin: "1rem 0", textTransform: 'none' }}>{e}</li>
-    )
-  })
-  const handleClick = async (url) => {
-    try {
-        const userToken = localStorage.getItem('userToken');
+  // const rule = rules?.map((e, index) => {
+  //   return (
+  //     <li style={{ color: "#737373", fontSize: "1.25rem", fontWeight: "500", margin: "1rem 0", textTransform: 'none' }}>{e}</li>
+  //   )
+  // })
+//   const handleClick = async (url) => {
+//     try {
+//         const userToken = localStorage.getItem('userToken');
 
-        if (userToken) {
-            // Check if the userToken matches an email in the database
-            const userRef = ref(getDatabase(), 'users');
-            const snapshot = await get(userRef);
+//         if (userToken) {
+//             // Check if the userToken matches an email in the database
+//             const userRef = ref(getDatabase(), 'users');
+//             const snapshot = await get(userRef);
 
-            if (snapshot.exists()) {
-                const users = snapshot.val();
-                const userWithEmail = Object.values(users).find(user => user.email === userToken);
+//             if (snapshot.exists()) {
+//                 const users = snapshot.val();
+//                 const userWithEmail = Object.values(users).find(user => user.email === userToken);
 
-                if (userWithEmail) {
-                    // User is authenticated, proceed with the redirect
-                    window.open(url, '_blank');
-                    return;
-                }
-            }
+//                 if (userWithEmail) {
+//                     // User is authenticated, proceed with the redirect
+//                     window.open(url, '_blank');
+//                     return;
+//                 }
+//             }
 
-            // User not found in the database, show alert and redirect to signup
-            handleClickOpen();
-        } else {
-            // UserToken not found, show alert and redirect to signup
-            handleClickOpen();
-        }
-    } catch (error) {
-        console.error('Error checking userToken:', error.message);
-    }
-};
+//             // User not found in the database, show alert and redirect to signup
+//             handleClickOpen();
+//         } else {
+//             // UserToken not found, show alert and redirect to signup
+//             handleClickOpen();
+//         }
+//     } catch (error) {
+//         console.error('Error checking userToken:', error.message);
+//     }
+// };
 
 
-const handleClick2 = async (url2) => {
-  try {
-      const userToken = localStorage.getItem('userToken');
+// const handleClick2 = async (url2) => {
+//   try {
+//       const userToken = localStorage.getItem('userToken');
 
-      if (userToken) {
-          // Check if the userToken matches an email in the database
-          const userRef = ref(getDatabase(), 'users');
-          const snapshot = await get(userRef);
+//       if (userToken) {
+//           // Check if the userToken matches an email in the database
+//           const userRef = ref(getDatabase(), 'users');
+//           const snapshot = await get(userRef);
 
-          if (snapshot.exists()) {
-              const users = snapshot.val();
-              const userWithEmail = Object.values(users).find(user => user.email === userToken);
+//           if (snapshot.exists()) {
+//               const users = snapshot.val();
+//               const userWithEmail = Object.values(users).find(user => user.email === userToken);
 
-              if (userWithEmail) {
-                  // User is authenticated, proceed with the redirect
-                  window.open(url2, '_blank');
-                  return;
-              }
-          }
+//               if (userWithEmail) {
+//                   // User is authenticated, proceed with the redirect
+//                   window.open(url2, '_blank');
+//                   return;
+//               }
+//           }
 
-          // User not found in the database, show alert and redirect to signup
-          handleClickOpen();
-      } else {
-          // UserToken not found, show alert and redirect to signup
-          handleClickOpen();
-      }
-  } catch (error) {
-      console.error('Error checking userToken:', error.message);
-  }
-};
+//           // User not found in the database, show alert and redirect to signup
+//           handleClickOpen();
+//       } else {
+//           // UserToken not found, show alert and redirect to signup
+//           handleClickOpen();
+//       }
+//   } catch (error) {
+//       console.error('Error checking userToken:', error.message);
+//   }
+// };
 
  // Function will execute on click of button
   
@@ -182,12 +182,18 @@ const handleClick2 = async (url2) => {
 
 
 
-          <motion.button
+          {/* <motion.button
             className="modal__close-wrapper"
             whileHover={{ scale: 1.2 }}
             onClick={close}
           >
             <IoCloseCircleOutline className="modal__close-icon" />
+          </motion.button> */}
+          <motion.button 
+          className="" 
+          whileHover={{scale: 1.2}} 
+          onClick={close}>
+          <IoCloseCircleOutline className="modal__close-icon" />
           </motion.button>
         </motion.div>
       </motion.div>
