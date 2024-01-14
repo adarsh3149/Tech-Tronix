@@ -8,6 +8,7 @@ export const Event_data = [
         isurl2: false,
         isRule:true,
         isprob: false,
+        isTalk:false,
         theme: "Electronics Sustainability",
         description: `“In a world flooded with information, capturing attention is an art.” 
         Let’s explore the significance of poster representation and the unique power it holds in conveying ideas. The Poster presentation competition “Posterama” is an innovative and an impactful opportunity to showcase graphic skills and potential in the field of graphic design and art.
@@ -30,6 +31,7 @@ export const Event_data = [
         fullname: "Code-fest - Code Compendium",
         img: "/images/img-2.png",
         isurl2: false,
+        isTalk:false,
         isRule:true,
         istheme: false,
         isprob: false,
@@ -52,6 +54,7 @@ export const Event_data = [
         isurl2: false,
         isRule:true,
         isprob: true,
+        isTalk:false,
         fullname: "Circuit Modelling/Designing - LOGIC LABYRINTH",
         theme: "To find the solution to the technical problems in our society by using basic circuital elements such as resistor, capacitor,transistors.",
         img: "/images/img-4.jpg",
@@ -78,6 +81,7 @@ export const Event_data = [
         isurl2: false,
         isRule:true,
         isprob: true,
+        isTalk:false,
         description: `"Innovation is taking two things that already exist and putting them together in a new way"
         In this competitive world, success is accompanied by the uniqueness of individuals. Catalyse is a profound paradigm shift in our world through the revolutionary power of innovation and technology. The HACKSPHERE is an innovative, impact-driven idea-thinking competition that challenges teams of 4 students to collaboratively solve multifaceted problem statements ranging from varied domains.
         While working on these innovative and creative projects your Intellectual stimulation, Personal Growth, Professional development, and Competitive advantage opportunities are enhanced.
@@ -98,6 +102,7 @@ export const Event_data = [
         isurl2: false,
         isRule:true,
         isprob: false,
+        isTalk:false,
         description:`“Seek and Uncover!”
             Treasure hunts are information - based scavenger hunts, or puzzle hunts, in which teams use their collective brainpower to solve clues.Each team is presented with a group of puzzles, or clues, which teams must solve to find a piece of information.
         This event improves our critical thinking ability, enhances our power to comprehend statements, and promotes teamwork and problem- solving skills to boost our imagination.
@@ -119,6 +124,7 @@ export const Event_data = [
         isurl2: true,
         isRule:true,
         isprob: false,
+        isTalk:false,
         theme:"Space Quiz",
         description:`"In the arena of the mind, every participant is a champion."  
 
@@ -143,6 +149,7 @@ export const Event_data = [
         isurl2: false,
         isRule:false,
         isprob: false,
+        isTalk:false,
         theme:"Space Quiz",
         description:`Welcome to the Fun-tastic Quiz Extravaganza! 🚀🤖
 

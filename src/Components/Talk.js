@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Listing from "./Listing";
 import Overlay from "./Overlay";
-import Modal from "./Modal3";
+import Modal from "./Modal";
 import Talk_listing from "./Talk_listing";
 import { AnimatePresence } from "framer-motion";
 

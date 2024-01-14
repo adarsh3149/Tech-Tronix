@@ -20,7 +20,7 @@ const Modal = ({ data, close }) => {
   const handleClose = () => {
     setOpen(false);
   };
-  const {img, fullname, theme, description, rules, url, time, venue, istheme, isurl2,url2, isprob,isRule} = data;
+  const {img, fullname, theme, description, rules, url, time, venue, istheme, isurl2,url2, isprob,isRule,isTalk} = data;
   const rule = rules?.map((e, index) => {
     return (
       <li style={{ color: "#737373", fontSize: "1.25rem", fontWeight: "500", margin: "1rem 0", textTransform: 'none' }}>{e}</li>
@@ -109,7 +109,7 @@ const handleClick2 = async (url2) => {
   // Remove the anchor from the DOM
   document.body.removeChild(anchor);
   } else if (fullname==="Circuit Modelling/Designing - LOGIC LABYRINTH"){
-    const pdfFile2 = '/docs/Techtronix Circuits and Modelling.pdf';
+    const pdfFile2 = '/docs/Techtronix Circuits and Modelling .pdf';
     // Create a hidden anchor element
     const anchor = document.createElement('a');
     anchor.style.display = 'none';
@@ -253,47 +253,12 @@ const handleClick2 = async (url2) => {
             </>
             
             :""}
-            {/* if (isprob&&(fullname==="Internal Hackathon - HACKSPHERE")){
-              <>
-            <Button onClick={handleDownload}
-            variant="outlined"
-            sx={{
-              color: "#f1f1f1",
-              borderRadius: "10px",
-              fontSize: "1.6rem",
-              marginTop: "1.5rem 0 ",
-              top: "1rem",
-              fontWeight: "600",
-              backgroundColor: "#0f1922",
-              ":hover": { color: "#0f1922" },
-            }}
-          >
-            DownLoad Problem Statement 
-          </Button>
-            </>
-            }elseif (isprob&&(fullname==="Circuit Modelling/Designing - LOGIC LABYRINTH")){
-              <>
-            <Button onClick={handleDownload2}
-            variant="outlined"
-            sx={{
-              color: "#f1f1f1",
-              borderRadius: "10px",
-              fontSize: "1.6rem",
-              marginTop: "1.5rem 0 ",
-              top: "1rem",
-              fontWeight: "600",
-              backgroundColor: "#0f1922",
-              ":hover": { color: "#0f1922" },
-            }}
-          >
-            DownLoad Problem Statement 
-          </Button>
-            </>
-            }   */}
+           
             
             
           </motion.div>
-          {isurl2 ?
+        {!isTalk ? 
+          (isurl2  ?
           <>
           <Box sx={{
             display:"flex",
@@ -371,7 +336,7 @@ const handleClick2 = async (url2) => {
             }}
           >
             Register
-          </Button>)}
+          </Button>)):""}
 
 
 

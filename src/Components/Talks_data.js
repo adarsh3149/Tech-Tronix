@@ -4,8 +4,11 @@ export  const Talks_data=[
         name:"Tech-defence Symposium",
         fullname:"Talk on role of electronics in space and defence",
         img:"/images/DRDO.png",
-        isimg: true,
+        istheme: false,
         isurl2: false,
+        isRule:false,
+        isprob: false,
+        isTalk:true,
         theme:"electronics sustainability",
         description:`The ETC Engineering Society cordially invites you to partake in our esteemed technical fest, TECHTRONIX. Prepare to be captivated by this exhilarating event as we delve into the fascinating world of electronics in space and defense. We are honored to have Aveek Dutta, a distinguished speaker, to share his valuable insights on this subject. Join us and embark on a journey of knowledge and discovery.
 
