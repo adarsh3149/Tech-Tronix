@@ -19,6 +19,10 @@ const Sponser = () => {
     "/images/image-removebg-preview (13).png",
     "/images/IEEE power electronics_prev_ui.png",
   ];
+  const row3 = [
+    "/images/ESS.jpeg",
+    "/images/Dhaba.jpg"
+  ]
   const row4 = [
     "/images/IEEE vssut_prev_ui.png",
     
@@ -119,6 +123,38 @@ const Sponser = () => {
           <Marquee>
 
             {row4.map((el) => (
+              <ImageGroup>
+                <Image src={el} />
+              </ImageGroup>
+            ))}
+
+
+
+          </Marquee>
+
+        </Wrapper>
+
+
+      </Box>
+      <Box
+        sx={{
+          fontSize: "2rem",
+          margin: "0 4rem",
+          fontWeight: "400",
+          letterSpacing: "0.5rem",
+        }}
+      >
+        Sponsored By .
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "center", overflow: "hidden" }}>
+
+
+
+        <Wrapper>
+
+          <Marquee>
+
+            {row3.map((el) => (
               <ImageGroup>
                 <Image src={el} />
               </ImageGroup>
