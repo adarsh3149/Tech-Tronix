@@ -20,7 +20,11 @@ const Sponser = () => {
     "/images/IEEE power electronics_prev_ui.png",
   ];
   const row3 = [
+
+
+
     "/images/ESS_prev_ui.png",
+
     "/images/Dhaba.jpg",
     "/images/Woody Jhones Pizza.png"
   ]
