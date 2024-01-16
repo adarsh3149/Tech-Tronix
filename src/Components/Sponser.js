@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import styled, { keyframes, css } from "styled-components";
 
 const Sponser = () => {
-  
+
   const row1 = [
     "/images/MCL_prev_ui.png",
     "/images/jsw-group-vector-logo_prev_ui.png",
@@ -20,13 +20,17 @@ const Sponser = () => {
     "/images/IEEE power electronics_prev_ui.png",
   ];
   const row3 = [
-    "/images/ESS.jpeg",
+
+
+
+    "/images/ESS_prev_ui.png",
+
     "/images/Dhaba.jpg",
     "/images/Woody Jhones Pizza.png"
   ]
   const row4 = [
     "/images/IEEE vssut_prev_ui.png",
-    
+
   ];
   return (
     <>
@@ -104,7 +108,7 @@ const Sponser = () => {
 
 
       </Box>
-     
+
       <Box
         sx={{
           fontSize: "2rem",
