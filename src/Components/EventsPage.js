@@ -4,6 +4,7 @@ import Events from "./Events";
 import Navbar from "./Navbar";
 
 
+
 const EventsPage = () => {
   useEffect(() => {
     // Scroll to the top when ComponentB mounts

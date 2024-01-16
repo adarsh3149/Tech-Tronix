@@ -35,20 +35,28 @@ export  const Talks_data=[
         ],
         url : 'https://docs.google.com/forms/u/0/d/1WgckB5c2VZ9g9HyYWQ0tBHa0MkNk8txE1ufpOVowDdY/viewform?edit_requested=true'
     },
-    // {
-    //     id:3,
-    //     name:"LOGIC LABYRINTH",
-    //     fullname:"Circuit Modelling/Designing - LOGIC LABYRINTH",
-    //     theme:"To find the solution to the technical problems in our society by using basic circuital elements such as resistor, capacitor,transistors.",
-    //     img:"/images/img-3.png",
-    //     isimg: false,
-    //     description:"'Circuit by Circuit, We Illuminate the Path to Innovation'. Once you know how to solve problems through a few components and circuits, you can start the journey of future innovations.This can help a student to come up with new technologies and innovations. Yet again here is a challenge for young tinkering minds whose hearts beat for a better tomorrow, “Logic Labyrinth” the circuit-making competition. Wherein you are required to assemble your team to find the solution to the technical problems by using the basic circuital elements.\n The EL & TC Society invites you to be a part of our technical fest TECHTRONIX. Join us in the Logic Labyrinth where your circuits being efficient and economic will be beneficial for society.",
-    //     rules:["It should be eco friendly.","It should be economical.","The circuit should be made by the materials which are readily available.","It should be made from elements such as resistors, capacitors.","No microprocessors or other fancy circuits should be used.","It should be easy to use.","It should be beneficial to the society."
-    //     ],
-    //     problem:[
-    //         "Non lethal portable weapon (by using high voltage). Here we can use transformer to step upbattery voltage. This high voltage will act for few seconds. Since it is portable one can carry easily.",")Prevention of mosquitoes and insects using ultrasonic frequencies.","Address the problem of slow decomposition of organic waste in landfills by promoting biodegradation.Create a system that accelerates organic waste decomposition.","Address concerns related to noise pollution in urban settings and promote awareness.Createa noise level monitoring system using sound sensors and analog circuits to trigger visual or audible alerts when predefined noise thresholds are exceeded.","Design a system to efficiently integrate renewable energy sources into existing power grids, addressing challenges related to intermittency and grid stability.","Develop a low-cost hearing aid using analog circuitry to amplify and filter sound based on theuser's hearing needs."
-    //     ],
-    //     url : 'https://docs.google.com/forms/u/0/d/1WgckB5c2VZ9g9HyYWQ0tBHa0MkNk8txE1ufpOVowDdY/viewform?edit_requested=true'
-    // },
+    {
+        id:3,
+        name:"Industry Academia Conclave",
+        fullname:"Industry Academia Conclave",
+        theme:"To find the solution to the technical problems in our society by using basic circuital elements such as resistor, capacitor,transistors.",
+        img:"/images/INDUSTRY ACADEMIA CONCLAVE.jpg",
+        isimg: true,
+        istheme: false,
+        isurl2: false,
+        isRule:false,
+        isprob: false,
+        isTalk:true,
+        description:`In today's tech landscape, students need more than theory; they require practical insights and industry readiness. Recognizing the gap between academia and the professional world, collaborations with industry leaders like DOT, Samsung, and Intel, including a focus on Cybersecurity and career opportunities in VLSI, are crucial. An "Industry-Academia Conclave" by these organizations becomes a dynamic hub for knowledge exchange, skill development, and networking, encompassing vital aspects of cybersecurity and VLSI career opportunities. By integrating the expertise of DOT, Samsung, and Intel, this conclave bridges the gap between theory and real-world applications, offering students exposure to cutting-edge technologies and industry best practices.
+        In view of above subject, Department Electronics and Telecommunication Engg., Veer Surendra Sai University of Technology, Burla is organizing an "INDUSTRY-ACADEMIA" Conclave on 20" January 2024.
+        
+        Industrial Academia Conclave is a unique event that brings together leading figures from prominent companies to share insightful talks on emerging technologies, industry needs and carrier pathways in the ever-evolving world of engineering. This event will provide a platform for networking, knowledge exchange, and showcasing the latest advancements in the field of electronics"`,
+        rules:["It should be eco friendly.","It should be economical.","The circuit should be made by the materials which are readily available.","It should be made from elements such as resistors, capacitors.","No microprocessors or other fancy circuits should be used.","It should be easy to use.","It should be beneficial to the society."
+        ],
+        problem:[
+            "Non lethal portable weapon (by using high voltage). Here we can use transformer to step upbattery voltage. This high voltage will act for few seconds. Since it is portable one can carry easily.",")Prevention of mosquitoes and insects using ultrasonic frequencies.","Address the problem of slow decomposition of organic waste in landfills by promoting biodegradation.Create a system that accelerates organic waste decomposition.","Address concerns related to noise pollution in urban settings and promote awareness.Createa noise level monitoring system using sound sensors and analog circuits to trigger visual or audible alerts when predefined noise thresholds are exceeded.","Design a system to efficiently integrate renewable energy sources into existing power grids, addressing challenges related to intermittency and grid stability.","Develop a low-cost hearing aid using analog circuitry to amplify and filter sound based on theuser's hearing needs."
+        ],
+        url : 'https://docs.google.com/forms/u/0/d/1WgckB5c2VZ9g9HyYWQ0tBHa0MkNk8txE1ufpOVowDdY/viewform?edit_requested=true'
+    },
     
 ]

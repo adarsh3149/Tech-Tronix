@@ -3,7 +3,6 @@ import Talk from "./Talk";
 import { Talks_data } from "./Talks_data";
 import AnimatedTitle from './AnimTitle';
 import Footer from './Footer';
-import { Box } from "@mui/material";
 import { motion } from "framer-motion";
 function Talks({isimg}) {
   return (
@@ -27,28 +26,10 @@ function Talks({isimg}) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.1, type: "spring", stiffness: 80, delay: index / 2 * 0.2 + 0.5 }}
-
-
           >
             <Talk data={item} key={item.id} />
           </motion.div>
         ))}
-       {/* {isimg ?
-        Talks_data.map((item) => (
-          <Talk data={item} key={item.id} />
-        )): */}
-        {/* <div style={{
-          width:'100%',
-          fontSize:"3rem",
-          fontWeight:"500",
-          display:"flex",
-          justifyContent:"flex-start",
-          alignItems:"flex-start",
-          margin:"0 1rem"
-        }}>
-          
-        </div> */}
-        {/* } */}
         
       </div>
 
