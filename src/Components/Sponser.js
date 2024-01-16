@@ -21,7 +21,8 @@ const Sponser = () => {
   ];
   const row3 = [
     "/images/ESS.jpeg",
-    "/images/Dhaba.jpg"
+    "/images/Dhaba.jpg",
+    "/images/Woody Jhones Pizza.png"
   ]
   const row4 = [
     "/images/IEEE vssut_prev_ui.png",
