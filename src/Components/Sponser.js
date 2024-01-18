@@ -20,11 +20,10 @@ const Sponser = () => {
     "/images/IEEE power electronics_prev_ui.png",
   ];
   const row3 = [
-
-
-
     "/images/ESS_prev_ui.png",
-
+    "/images/Dhaba.jpg",
+    "/images/Woody Jhones Pizza.png",
+    "/images/ESS_prev_ui.png",
     "/images/Dhaba.jpg",
     "/images/Woody Jhones Pizza.png"
   ]
@@ -158,15 +157,20 @@ const Sponser = () => {
         <Wrapper>
 
           <Marquee>
-
-            {row3.map((el) => (
-              <ImageGroup>
-                <Image src={el} />
-              </ImageGroup>
-            ))}
-
-
-
+            <MarqueeGroup2>
+              {row3.map((el) => (
+                <ImageGroup>
+                  <Image src={el} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup2>
+            <MarqueeGroup2>
+              {row3.map((el) => (
+                <ImageGroup>
+                  <Image src={el} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup2>
           </Marquee>
 
         </Wrapper>
