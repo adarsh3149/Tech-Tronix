@@ -9,7 +9,7 @@ const Conclave = () => {
     <>
    <div className='heading' id='talks' style={{
     padding:"2rem 1rem",margin:"0 2rem"
-   }}><AnimatedTitle name="Indusrial Conclave."/></div>
+   }}><AnimatedTitle name="Indusrial Academia Conclave."/></div>
     
       <div className="Talks_data" style={{
        padding:"0 1rem",
