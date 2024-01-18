@@ -7,10 +7,10 @@ import { Conclave_data } from './Conclave_data';
 const Conclave = () => {
   return (
     <>
-      <div className='heading' id='talks' style={{
-        padding: "2rem 1rem", margin: "0 2rem"
-      }}><AnimatedTitle name="Indusrial Conclave." /></div>
 
+   <div className='heading' id='talks' style={{
+    padding:"2rem 1rem",margin:"0 2rem"
+   }}><AnimatedTitle name="Indusrial Academia Conclave."/></div>
       <div className="Talks_data" style={{
         padding: "0 1rem",
         display: "flex",
