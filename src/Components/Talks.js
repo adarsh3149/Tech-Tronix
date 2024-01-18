@@ -2,7 +2,6 @@
 import Talk from "./Talk";
 import { Talks_data } from "./Talks_data";
 import AnimatedTitle from './AnimTitle';
-import Footer from './Footer';
 import { motion } from "framer-motion";
 function Talks({isimg}) {
   return (
@@ -32,8 +31,6 @@ function Talks({isimg}) {
         ))}
         
       </div>
-
-    <Footer></Footer>
     </>
   );
 }

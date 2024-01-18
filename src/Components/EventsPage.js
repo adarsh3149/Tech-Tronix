@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Talks from "./Talks";
 import Events from "./Events";
 import Navbar from "./Navbar";
+import Conclave from "./Conclave";
 
 
 
@@ -19,6 +20,7 @@ const EventsPage = () => {
       <Navbar/>    
       <Events />
       <Talks />
+      <Conclave />
     </>
   );
 };
