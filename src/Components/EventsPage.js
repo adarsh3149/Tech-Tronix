@@ -3,6 +3,7 @@ import Talks from "./Talks";
 import Events from "./Events";
 import Navbar from "./Navbar";
 import Conclave from "./Conclave";
+import Footer from "./Footer";
 
 
 
@@ -17,10 +18,11 @@ const EventsPage = () => {
 
   return (
     <>
-      <Navbar/>    
+      <Navbar />
       <Events />
       <Talks />
       <Conclave />
+      <Footer />
     </>
   );
 };
