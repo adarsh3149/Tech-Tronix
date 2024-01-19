@@ -23,9 +23,11 @@ const Sponser = () => {
     "/images/ESS_prev_ui.png",
     "/images/Dhaba.jpg",
     "/images/Woody Jhones Pizza.png",
+    "/images/ENTERTAINMENT KINGDOM Logo with Copyright.png",
     "/images/ESS_prev_ui.png",
     "/images/Dhaba.jpg",
-    "/images/Woody Jhones Pizza.png"
+    "/images/Woody Jhones Pizza.png",
+    "/images/ENTERTAINMENT KINGDOM Logo with Copyright.png",
   ]
   const row4 = [
     "/images/IEEE vssut_prev_ui.png",
